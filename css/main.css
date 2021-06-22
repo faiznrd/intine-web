@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+*{
+    font-family: Poppins;
+}
+#text-data-wrapper{
+    -webkit-transition: background-color 1000ms linear;
+}
+.text-data{
+    transition: .2s;
+}
+video{
+    min-width: 100%;
+    min-height: 100%;
+}
+#description-jogja{
+    background: url("../assets/img/tari-serimpi.png") right;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}

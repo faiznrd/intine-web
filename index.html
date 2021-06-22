@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/stickybits.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="lg:h-screen flex justify-center">
+        <nav>
+
+        </nav>
+        <div class="absolute z-10 left-7 bottom-7 w-2/5">
+            <h2 class="text-9xl pb-5 m-auto font-bold text-white">Welcome to Jogja</h2>
+            <h2 class="text-4xl pb-5 m-auto text-white">Mangayu Gayuning Bawana</h2>
+        </div>
+        <video class="absolute z-0 bottom-0 right-0" autoplay muted loop id="myVideo">
+            <source src="assets/video/timelapse.mp4" type="video/mp4">
+          </video>
+    </div>
+    <div class="lg:h-screen flex items-center" id="description-jogja">
+        <span class="inline-block text-2xl md:text-6xl pb-5 p-7 font-bold w-3/4 align-middle leading-6">Jogja is a city on the Indonesian island of Java known for its traditional arts and cultural heritage.</span>
+    </div>    
+    <div class="lg:flex lg:justify-end" id="lol-parent">
+        <div class="relative w-full lg:w-2/5 lg:h-screen" id="lol">
+            <div class="w-full h-full">
+                <div class="relative h-full bg-blue-500 " id="text-data-wrapper">
+                    <div class="text-data" id="wisata-text">
+                        <div class="absolute pt-8 pl-7 top-7 left-8">
+                            <h2 class="font-bold text-3xl">Wisata</h2>
+                        </div>                    
+                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
+                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
+                            <a class="font-bold" href="#">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                    <div class="text-data " id="kuliner-text" style="display: none;">
+                        <div class="absolute pt-8 pl-7 top-7 left-8">
+                            <h2 class="font-bold text-3xl">Kuliner</h2>
+                        </div>                    
+                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
+                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
+                            <a class="font-bold" href="#">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                    <div class="text-data" id="transportasi-umum-text" style="display: none;">
+                        <div class="absolute pt-8 pl-7 top-7 left-8">
+                            <h2 class="font-bold text-3xl">Transportasi Umum</h2>
+                        </div>                    
+                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
+                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
+                            <a class="font-bold" href="#">Baca Selengkapnya</a>
+                        </div>
+                    </div>                    
+                    <div class="text-data pb-9 pt-8 pl-6" id="kebudayaan-text" style="display: none;">
+                        <div class="absolute pt-8 pl-7 top-7 left-8">
+                            <h2 class="font-bold text-3xl">kebudayaan</h2>
+                        </div>                    
+                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
+                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
+                            <a class="font-bold" href="#">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
+        <div class="relative w-full lg:w-3/5">
+            <div class="relative lg:h-screen overflow-hidden" id="wisata-banner">
+                <div class="w-full h-full absolute">
+                    <img class="w-full h-full object-cover"  src="assets/img/prambanan.jpg" alt="" srcset="">
+                    <div class=""></div>
+                </div>
+            </div>    
+            <div class="relative lg:h-screen overflow-hidden" id="kuliner-banner">
+                <div class="w-full h-full absolute">
+                    <img class="w-full h-full object-cover" src="assets/img/gudeg.jpg" alt="" srcset="">
+                </div>
+            </div>
+            <div class="relative lg:h-screen overflow-hidden" id="transportasi-umum-banner">
+                <div class="w-full h-full absolute">
+                    <img class="w-full h-full object-cover"  src="assets/img/sepur.jpg" alt="" srcset="">
+                </div>
+            </div>              
+            <div class="relative lg:h-screen overflow-hidden" id="kebudayaan-banner">
+                <div class="w-full h-full absolute">
+                    <img class="w-full h-full object-cover"  src="assets/img/wayang.png" alt="" srcset="">
+                </div>
+            </div>    
+        </div>
+
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
