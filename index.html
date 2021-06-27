@@ -1,100 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daerah Istimewa Yogyakarta</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-cookies.js"></script>
+    <script src="js/sammy.js"></script>
     <script src="js/stickybits.min.js"></script>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="js/scrollAnimate.min.js"></script>
+    <link href="css/tailwind.css" rel="stylesheet">    
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/hamburger.css" rel="stylesheet">
 
 </head>
 <body>
-    <div class="lg:h-screen flex justify-center">
-        <nav>
-
+    <div id="menu">
+        <nav class="z-40 absolute w-full" id="navbar">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-7" id="white">
+                    <svg width="70" viewBox="0 0 327 131" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M52.918 0.601562C49.125 9.32812 53.918 25.5664 31.2461 29.3594C34.1914 22.2773 29.8125 2.67578 52.918 0.601562ZM223.301 29.4648H260.207L252.699 77.1016C251.508 86.7852 252.496 90.0781 264.734 88.8555C263.195 93.8516 260.496 94.1758 253.762 94.2773C244.969 94.4141 242.766 92.9297 241.496 89.7344C239.863 92.4688 236.887 94.0859 232.684 94.6797L216.188 94.6562C206.438 94.6445 200.898 87.3281 202.289 77.9375L206.918 46.6055C208.223 37.7539 213.93 30.5859 223.301 29.4648ZM243.262 34.8008L232.52 34.7812C227.195 35.1406 224.594 38.0742 223.73 43.3047L217.578 79.4062C216.582 85.2461 218.883 88.6445 225.242 89.0117C229.57 89.2617 234.379 87.1875 235.746 80.9648L243.262 34.8008ZM116.195 47.7617C117.785 38.0625 124.102 29.0117 134.73 29.0547L157.621 29.1445C154.93 32.0117 152.906 35.8281 153.547 39.2891C157.062 32.0195 162.914 29.4297 170.293 29.1055L160.879 88.3008C159.227 100.738 153.852 108.992 143.043 111.129L105.465 110.914C106.207 108.039 107.996 105.715 111.172 105.469L136.062 105.191C140.66 104.402 143.41 99.3594 142.695 94.0898L123.633 94.1914C115.262 93.5508 110.492 87.9102 111.887 78.7969L116.195 47.7617ZM141.34 34.9375H145.629C149.289 34.9375 151.793 37.9297 151.195 41.5898L144.566 82.1445C143.969 85.8047 140.488 88.7969 136.828 88.7969H132.535C128.879 88.7969 126.375 85.8047 126.973 82.1445L133.598 41.5898C134.195 37.9297 137.68 34.9375 141.34 34.9375ZM73.6836 29.0352H91.1875C100.492 29.0352 107.059 36.8008 105.773 46.2891L101.477 78.0859C100.195 87.5781 91.5312 95.3438 82.2227 95.3438H64.7227C55.418 95.3438 48.8516 87.5781 50.1328 78.0859L54.4336 46.2891C55.7148 36.8008 64.3789 29.0352 73.6836 29.0352ZM80.4609 34.7227H84.7461C88.3477 34.7227 90.8203 37.6641 90.2383 41.2695L83.668 82.0352C83.0898 85.6367 79.668 88.5781 76.0664 88.5781H71.7773C68.1797 88.5781 65.707 85.6367 66.2891 82.0352L72.8555 41.2695C73.4375 37.6641 76.8594 34.7227 80.4609 34.7227ZM204.473 0.640625C200.68 9.36719 205.473 25.6016 182.797 29.3945C185.746 22.3125 181.367 2.71484 204.473 0.640625ZM199.965 29.0742C196.555 44.3086 193.055 63.6641 190.297 83.8672C189.332 90.9414 189.098 98.7656 184.297 104.531C178.867 111.062 172.059 112.469 154.727 111.145C156.035 100.68 168.023 110.117 171.906 99.3438C172.93 96.4961 173.141 93.2539 173.586 90.2734L179.996 47.3984C183.219 32.9219 191.164 28.9531 199.965 29.0742ZM48.4102 29.0352C45 44.2734 41.5 63.6289 38.7422 83.8281C37.7773 90.9023 37.543 98.7305 32.7461 104.496C27.3125 111.027 17.5156 112.227 0.183594 110.898C1.40234 99.6133 18.8164 112.031 21.2148 95.6992L28.4453 47.3633C31.668 32.8828 39.6094 28.9219 48.4102 29.0352Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M201.953 112.684C200.371 112.215 198.684 112.184 197.816 113.203C196.668 114.559 196.582 117.816 196.227 120.473C195.711 124.355 195.309 128.152 193.656 129.754C199.293 130.434 199.531 127.566 199.996 123.863C200.445 120.277 200.688 115.52 201.953 112.684ZM325.07 112.309C325.223 114.559 322.074 122.129 322.676 125.734C322.938 127.313 323.883 127.578 326.379 127.348C324.488 131.684 320.082 131.344 318.781 127.297C310.738 135.07 306.547 126.535 308.758 119.563C310.656 113.563 315.305 110.188 325.07 112.309ZM320.84 115.051C318.137 114.637 316.207 115.176 314.793 116.719C312.984 118.695 312.18 121.914 312.664 124.527C313.227 127.539 315.441 127.199 317.137 125.941C317.824 125.43 318.477 125.035 318.824 124.234C319.535 121.539 319.418 117.578 320.84 115.051ZM289.426 112.469C289.773 113.789 289.098 120.992 289.883 125.656C290.988 123.234 291.91 119.828 293.113 117.039C294.008 114.969 294.785 113.27 296.727 112.762C297.395 112.586 298.199 112.551 299.195 112.691C299.336 113.012 299.391 113.777 299.398 114.805C299.418 117.641 299.387 122.438 299.328 125.371C300.285 123.594 301.52 120.492 302.605 117.738C303.914 114.414 304.934 111.531 308.824 112.578C306.793 116.703 305.492 120.719 303.391 125.227C302.172 127.828 301.379 130.145 298.324 130.148C297.23 130.148 296.172 129.914 296.051 129.078C295.672 126.43 296.305 120.859 296.195 117.93C294.715 120.434 294.031 124.496 292.473 127.273C291.406 129.172 290.285 130.414 285.812 129.809C285.703 127.98 285.883 123.934 285.809 120.113C285.719 115.785 284.629 111.629 289.426 112.469ZM246.641 112.414C246.176 113.34 245.949 114.258 246.008 115.227C248.855 111.813 254.793 110.148 255.176 115.18C257.34 112.84 259.063 112.203 260.973 112.289C263.773 112.422 264.695 114.473 264.48 116.629C263.473 126.883 262.902 131.336 258.145 129.777C258.094 127.496 261.488 116.508 259.762 115.551C258.914 115.078 257.086 116.18 255.793 117.961C254.004 120.422 254.293 122.242 253.82 125.008C253.336 127.824 252.645 130.371 248.832 129.703C248.461 128.508 253.684 113.836 249.297 115.547C241.484 118.602 248.602 130.828 239.254 129.969C242.09 124.277 238.824 112.121 246.641 112.414ZM279.883 128.703C278.852 129.555 277.492 130.18 276.062 130.441C275.004 130.633 273.895 130.645 272.848 130.414C271.727 130.176 270.66 129.664 269.777 128.82C268.094 127.219 267.137 124.508 267.867 120.289C268.414 117.141 270.121 114.879 272.156 113.477C273.418 112.609 274.813 112.07 276.145 111.855C277.563 111.621 278.934 111.758 280.047 112.234C281.25 112.754 282.164 113.648 282.594 114.922C283 116.129 282.879 117.555 282.273 118.891C281.875 119.766 281.262 120.621 280.445 121.359C279.648 122.078 278.656 122.688 277.488 123.078C275.777 123.66 273.684 123.785 271.273 123.129C271.293 124.621 271.691 125.598 272.297 126.172C272.656 126.516 273.117 126.73 273.621 126.836C274.195 126.961 274.809 126.953 275.406 126.844C277.176 126.523 278.734 125.805 279.895 124.715C280.594 125.438 282.09 126.895 279.883 128.703ZM274.234 116.484C273.25 117.16 272.387 118.156 271.867 119.488C273.672 120.051 275.168 120.008 276.332 119.617C276.996 119.391 277.555 119.051 277.996 118.652C278.418 118.273 278.734 117.828 278.938 117.387C279.168 116.879 279.238 116.41 279.129 116.078C279.059 115.879 278.867 115.715 278.602 115.602C278.113 115.391 277.449 115.344 276.719 115.465C275.898 115.594 275.031 115.934 274.234 116.484ZM219.238 115.68C219.391 113.965 220.41 113.164 221.82 112.809C222.605 109.98 224.129 108.227 227.48 108.453C226.965 109.512 226.48 110.91 226.055 112.598C227.734 112.664 229.395 112.789 230.586 112.523C230.141 115.328 227.98 115.578 225.438 115.465C224.906 118.402 224.547 121.922 224.465 125.848C224.387 127.488 226.223 127.578 227.91 125.848C231.441 130.645 219.543 133.559 220.516 124.551C220.871 121.246 220.953 118.012 221.324 115.32C220.594 115.359 219.887 115.461 219.238 115.68ZM214.668 116.996C213.832 116.066 212.762 115.57 211.727 115.438C211.055 115.348 210.402 115.41 209.855 115.605C209.414 115.762 209.062 115.996 208.871 116.285C208.738 116.484 208.676 116.742 208.719 117.051C208.844 117.988 210.164 118.535 211.477 119.078C213.793 120.047 216.094 121.004 216.402 124.094C216.535 125.43 216.238 126.621 215.617 127.629C214.906 128.785 213.781 129.641 212.426 130.129C211.176 130.578 209.711 130.719 208.211 130.473C206.199 130.145 204.09 129.145 202.301 127.316L204.922 124.746C206.129 125.984 207.508 126.656 208.797 126.863C209.684 127.008 210.512 126.938 211.195 126.691C211.777 126.484 212.242 126.145 212.512 125.711C212.719 125.371 212.816 124.953 212.766 124.449C212.676 123.539 211.379 123.004 210.074 122.461C207.793 121.512 205.5 120.559 205.098 117.523C204.93 116.277 205.219 115.172 205.832 114.246C206.48 113.285 207.469 112.566 208.641 112.156C209.707 111.777 210.941 111.648 212.199 111.813C214.027 112.055 215.922 112.922 217.391 114.566L214.668 116.996ZM239.695 106.195C238.59 107.961 240.375 111.387 233.809 110.691C235.234 109.137 233.453 105.176 239.695 106.195ZM203.129 106.203C202.023 107.973 203.809 111.398 197.242 110.703C198.672 109.152 196.887 105.191 203.129 106.203ZM238.52 112.664C236.938 112.203 235.25 112.164 234.383 113.191C233.234 114.539 233.148 117.801 232.793 120.453C232.273 124.344 231.871 128.141 230.223 129.742C235.859 130.422 236.098 127.555 236.559 123.852C237.012 120.262 237.254 115.504 238.52 112.664Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="p-7 hidden" id="dark">
+                    <svg width="70" viewBox="0 0 327 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M52.7344 0C48.9414 8.72656 53.7344 24.9648 31.0625 28.7578C34.0078 21.6758 29.6289 2.07422 52.7344 0ZM223.117 28.8633H260.023L252.516 76.5C251.324 86.1836 252.312 89.4766 264.551 88.2539C263.012 93.25 260.312 93.5742 253.578 93.6758C244.785 93.8125 242.582 92.3281 241.312 89.1328C239.68 91.8672 236.703 93.4844 232.5 94.0781L216.004 94.0547C206.254 94.043 200.715 86.7266 202.105 77.3359L206.734 46.0039C208.039 37.1523 213.746 29.9844 223.117 28.8633ZM243.078 34.1992L232.336 34.1797C227.012 34.5391 224.41 37.4727 223.547 42.7031L217.395 78.8047C216.398 84.6445 218.699 88.043 225.059 88.4102C229.387 88.6602 234.195 86.5859 235.562 80.3633L243.078 34.1992ZM116.012 47.1602C117.602 37.4609 123.918 28.4102 134.547 28.4531L157.438 28.543C154.746 31.4102 152.723 35.2266 153.363 38.6875C156.879 31.418 162.73 28.8281 170.109 28.5039L160.695 87.6992C159.043 100.137 153.668 108.391 142.859 110.527L105.281 110.312C106.023 107.438 107.813 105.113 110.988 104.867L135.879 104.59C140.477 103.801 143.227 98.7578 142.512 93.4883L123.449 93.5898C115.078 92.9492 110.309 87.3086 111.703 78.1953L116.012 47.1602ZM141.156 34.3359H145.445C149.105 34.3359 151.609 37.3281 151.012 40.9883L144.383 81.543C143.785 85.2031 140.305 88.1953 136.645 88.1953H132.352C128.695 88.1953 126.191 85.2031 126.789 81.543L133.414 40.9883C134.012 37.3281 137.496 34.3359 141.156 34.3359ZM73.5 28.4336H91.0039C100.309 28.4336 106.875 36.1992 105.59 45.6875L101.293 77.4844C100.012 86.9766 91.3477 94.7422 82.0391 94.7422H64.5391C55.2344 94.7422 48.668 86.9766 49.9492 77.4844L54.25 45.6875C55.5312 36.1992 64.1953 28.4336 73.5 28.4336ZM80.2773 34.1211H84.5625C88.1641 34.1211 90.6367 37.0625 90.0547 40.668L83.4844 81.4336C82.9062 85.0352 79.4844 87.9766 75.8828 87.9766H71.5938C67.9961 87.9766 65.5234 85.0352 66.1055 81.4336L72.6719 40.668C73.2539 37.0625 76.6758 34.1211 80.2773 34.1211ZM204.289 0.0390625C200.496 8.76563 205.289 25 182.613 28.793C185.563 21.7109 181.184 2.11328 204.289 0.0390625ZM199.781 28.4727C196.371 43.707 192.871 63.0625 190.113 83.2656C189.148 90.3398 188.914 98.1641 184.113 103.93C178.684 110.461 171.875 111.867 154.543 110.543C155.852 100.078 167.84 109.516 171.723 98.7422C172.746 95.8945 172.957 92.6523 173.402 89.6719L179.812 46.7969C183.035 32.3203 190.98 28.3516 199.781 28.4727ZM48.2266 28.4336C44.8164 43.6719 41.3164 63.0273 38.5586 83.2266C37.5937 90.3008 37.3594 98.1289 32.5625 103.895C27.1289 110.426 17.332 111.625 0 110.297C1.21875 99.0117 18.6328 111.43 21.0312 95.0977L28.2617 46.7617C31.4844 32.2813 39.4258 28.3203 48.2266 28.4336Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M201.77 112.082C200.188 111.613 198.5 111.582 197.633 112.602C196.484 113.957 196.398 117.215 196.043 119.871C195.527 123.754 195.125 127.551 193.473 129.152C199.109 129.832 199.348 126.965 199.812 123.262C200.262 119.676 200.504 114.918 201.77 112.082ZM324.887 111.707C325.039 113.957 321.891 121.527 322.492 125.133C322.754 126.711 323.699 126.977 326.195 126.746C324.305 131.082 319.898 130.742 318.598 126.695C310.555 134.469 306.363 125.934 308.574 118.961C310.473 112.961 315.121 109.586 324.887 111.707ZM320.656 114.449C317.953 114.035 316.023 114.574 314.609 116.117C312.801 118.094 311.996 121.313 312.48 123.926C313.043 126.938 315.258 126.598 316.953 125.34C317.641 124.828 318.293 124.434 318.641 123.633C319.352 120.938 319.234 116.977 320.656 114.449ZM289.242 111.867C289.59 113.188 288.914 120.391 289.699 125.055C290.805 122.633 291.727 119.227 292.93 116.438C293.824 114.367 294.602 112.668 296.543 112.16C297.211 111.984 298.016 111.949 299.012 112.09C299.152 112.41 299.207 113.176 299.215 114.203C299.234 117.039 299.203 121.836 299.145 124.77C300.102 122.992 301.336 119.891 302.422 117.137C303.73 113.813 304.75 110.93 308.641 111.977C306.609 116.102 305.309 120.117 303.207 124.625C301.988 127.227 301.195 129.543 298.141 129.547C297.047 129.547 295.988 129.313 295.867 128.477C295.488 125.828 296.121 120.258 296.012 117.328C294.531 119.832 293.848 123.895 292.289 126.672C291.223 128.57 290.102 129.813 285.629 129.207C285.52 127.379 285.699 123.332 285.625 119.512C285.535 115.184 284.445 111.027 289.242 111.867ZM246.457 111.813C245.992 112.738 245.766 113.656 245.824 114.625C248.672 111.211 254.609 109.547 254.992 114.578C257.156 112.238 258.879 111.602 260.789 111.688C263.59 111.82 264.512 113.871 264.297 116.027C263.289 126.281 262.719 130.734 257.961 129.176C257.91 126.895 261.305 115.906 259.578 114.949C258.73 114.477 256.902 115.578 255.609 117.359C253.82 119.82 254.109 121.641 253.637 124.406C253.152 127.223 252.461 129.77 248.648 129.102C248.277 127.906 253.5 113.234 249.113 114.945C241.301 118 248.418 130.227 239.07 129.367C241.906 123.676 238.641 111.52 246.457 111.813ZM279.699 128.102C278.668 128.953 277.309 129.578 275.879 129.84C274.82 130.031 273.711 130.043 272.664 129.813C271.543 129.574 270.477 129.063 269.594 128.219C267.91 126.617 266.953 123.906 267.684 119.688C268.23 116.539 269.938 114.277 271.973 112.875C273.234 112.008 274.629 111.469 275.961 111.254C277.379 111.02 278.75 111.156 279.863 111.633C281.066 112.152 281.98 113.047 282.41 114.32C282.816 115.527 282.695 116.953 282.09 118.289C281.691 119.164 281.078 120.02 280.262 120.758C279.465 121.477 278.473 122.086 277.305 122.477C275.594 123.059 273.5 123.184 271.09 122.527C271.109 124.02 271.508 124.996 272.113 125.57C272.473 125.914 272.934 126.129 273.438 126.234C274.012 126.359 274.625 126.352 275.223 126.242C276.992 125.922 278.551 125.203 279.711 124.113C280.41 124.836 281.906 126.293 279.699 128.102ZM274.051 115.883C273.066 116.559 272.203 117.555 271.684 118.887C273.488 119.449 274.984 119.406 276.148 119.016C276.813 118.789 277.371 118.449 277.812 118.051C278.234 117.672 278.551 117.227 278.754 116.785C278.984 116.277 279.055 115.809 278.945 115.477C278.875 115.277 278.684 115.113 278.418 115C277.93 114.789 277.266 114.742 276.535 114.863C275.715 114.992 274.848 115.332 274.051 115.883ZM219.055 115.078C219.207 113.363 220.227 112.563 221.637 112.207C222.422 109.379 223.945 107.625 227.297 107.852C226.781 108.91 226.297 110.309 225.871 111.996C227.551 112.063 229.211 112.188 230.402 111.922C229.957 114.727 227.797 114.977 225.254 114.863C224.723 117.801 224.363 121.32 224.281 125.246C224.203 126.887 226.039 126.977 227.727 125.246C231.258 130.043 219.359 132.957 220.332 123.949C220.688 120.645 220.77 117.41 221.141 114.719C220.41 114.758 219.703 114.859 219.055 115.078ZM214.484 116.395C213.648 115.465 212.578 114.969 211.543 114.836C210.871 114.746 210.219 114.809 209.672 115.004C209.23 115.16 208.879 115.395 208.688 115.684C208.555 115.883 208.492 116.141 208.535 116.449C208.66 117.387 209.98 117.934 211.293 118.477C213.609 119.445 215.91 120.402 216.219 123.492C216.352 124.828 216.055 126.02 215.434 127.027C214.723 128.184 213.598 129.039 212.242 129.527C210.992 129.977 209.527 130.117 208.027 129.871C206.016 129.543 203.906 128.543 202.117 126.715L204.738 124.145C205.945 125.383 207.324 126.055 208.613 126.262C209.5 126.406 210.328 126.336 211.012 126.09C211.594 125.883 212.059 125.543 212.328 125.109C212.535 124.77 212.633 124.352 212.582 123.848C212.492 122.938 211.195 122.402 209.891 121.859C207.609 120.91 205.316 119.957 204.914 116.922C204.746 115.676 205.035 114.57 205.648 113.645C206.297 112.684 207.285 111.965 208.457 111.555C209.523 111.176 210.758 111.047 212.016 111.211C213.844 111.453 215.738 112.32 217.207 113.965L214.484 116.395ZM239.512 105.594C238.406 107.359 240.191 110.785 233.625 110.09C235.051 108.535 233.27 104.574 239.512 105.594ZM202.945 105.602C201.84 107.371 203.625 110.797 197.059 110.102C198.488 108.551 196.703 104.59 202.945 105.602ZM238.336 112.063C236.754 111.602 235.066 111.563 234.199 112.59C233.051 113.938 232.965 117.199 232.609 119.852C232.09 123.742 231.688 127.539 230.039 129.141C235.676 129.82 235.914 126.953 236.375 123.25C236.828 119.66 237.07 114.902 238.336 112.063Z" fill="black"/>
+                        </svg>                            
+                </div>
+                <div class="flex justify-end items-center">
+                    <div class="text-3xl text-white font-thin pr-9 lang-trigger text-center cursor-pointer">EN</div>
+                    <div class="hamburger p-7 pr-9">
+                        <div class="hamburger-box white">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed bottom-5 left-5" id="menu-corner">
+                <div class="text-3xl text-white font-thin lang-trigger block pb-9 text-center cursor-pointer">EN</div>
+                <div class="hamburger p-0">
+                    <div class="hamburger-box white block">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                  </div>
+            </div>
         </nav>
-        <div class="absolute z-10 left-7 bottom-7 w-2/5">
-            <h2 class="text-9xl pb-5 m-auto font-bold text-white">Welcome to Jogja</h2>
-            <h2 class="text-4xl pb-5 m-auto text-white">Mangayu Gayuning Bawana</h2>
+        <div class="z-30 h-screen w-full bg-white fixed top-0 left-0 hidden " id="content">
+            <ul class="lg:text-8xl text-5xl lg:text-center font-bold mt-24 lg:p-0 p-5">
+                <li class="pb-4">
+                    <a href="#/home" class="home" lang="id">Beranda</a>
+                    <a href="#/home" class="home" lang="en">Home</a>
+                </li>
+                <li class="pb-4">
+                    <a href="#/public-transport" class="item-menu" lang="id">Transportasi Umum</a>
+                    <a href="#/public-transport" class="item-menu" lang="en">Public Transport</a>
+                </li>
+                <li class="pb-4">
+                    <a href="#/tourist-attraction" class="item-menu" lang="id">Wisata</a>
+                    <a href="#/tourist-attraction" class="item-menu" lang="en">Tourist Attraction</a>
+                </li>
+                <li class="pb-4">
+                    <a href="#/culinary" class="item-menu" lang="id">Kuliner</a>
+                    <a href="#/culinary" class="item-menu" lang="en">Culinary</a>
+                </li>
+                <li class="pb-4">
+                    <a href="#/culture" class="item-menu" lang="id">Kebudayaan</a>
+                    <a href="#/culture" class="item-menu" lang="en">Culture</a>
+                </li>
+            </ul>
         </div>
-        <video class="absolute z-0 bottom-0 right-0" autoplay muted loop id="myVideo">
-            <source src="assets/video/timelapse.mp4" type="video/mp4">
-          </video>
     </div>
-    <div class="lg:h-screen flex items-center" id="description-jogja">
-        <span class="inline-block text-2xl md:text-6xl pb-5 p-7 font-bold w-3/4 align-middle leading-6">Jogja is a city on the Indonesian island of Java known for its traditional arts and cultural heritage.</span>
-    </div>    
-    <div class="lg:flex lg:justify-end" id="lol-parent">
-        <div class="relative w-full lg:w-2/5 lg:h-screen" id="lol">
-            <div class="w-full h-full">
-                <div class="relative h-full bg-blue-500 " id="text-data-wrapper">
-                    <div class="text-data" id="wisata-text">
-                        <div class="absolute pt-8 pl-7 top-7 left-8">
-                            <h2 class="font-bold text-3xl">Wisata</h2>
-                        </div>                    
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
-                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
-                            <a class="font-bold" href="#">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="text-data " id="kuliner-text" style="display: none;">
-                        <div class="absolute pt-8 pl-7 top-7 left-8">
-                            <h2 class="font-bold text-3xl">Kuliner</h2>
-                        </div>                    
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
-                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
-                            <a class="font-bold" href="#">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="text-data" id="transportasi-umum-text" style="display: none;">
-                        <div class="absolute pt-8 pl-7 top-7 left-8">
-                            <h2 class="font-bold text-3xl">Transportasi Umum</h2>
-                        </div>                    
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
-                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
-                            <a class="font-bold" href="#">Baca Selengkapnya</a>
-                        </div>
-                    </div>                    
-                    <div class="text-data pb-9 pt-8 pl-6" id="kebudayaan-text" style="display: none;">
-                        <div class="absolute pt-8 pl-7 top-7 left-8">
-                            <h2 class="font-bold text-3xl">kebudayaan</h2>
-                        </div>                    
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl">
-                            <h2 class="text-3xl pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi tincidunt sem finibus bibendum.</h2>
-                            <a class="font-bold" href="#">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>             
-            </div>
-        </div>
-        <div class="relative w-full lg:w-3/5">
-            <div class="relative lg:h-screen overflow-hidden" id="wisata-banner">
-                <div class="w-full h-full absolute">
-                    <img class="w-full h-full object-cover"  src="assets/img/prambanan.jpg" alt="" srcset="">
-                    <div class=""></div>
-                </div>
-            </div>    
-            <div class="relative lg:h-screen overflow-hidden" id="kuliner-banner">
-                <div class="w-full h-full absolute">
-                    <img class="w-full h-full object-cover" src="assets/img/gudeg.jpg" alt="" srcset="">
-                </div>
-            </div>
-            <div class="relative lg:h-screen overflow-hidden" id="transportasi-umum-banner">
-                <div class="w-full h-full absolute">
-                    <img class="w-full h-full object-cover"  src="assets/img/sepur.jpg" alt="" srcset="">
-                </div>
-            </div>              
-            <div class="relative lg:h-screen overflow-hidden" id="kebudayaan-banner">
-                <div class="w-full h-full absolute">
-                    <img class="w-full h-full object-cover"  src="assets/img/wayang.png" alt="" srcset="">
-                </div>
-            </div>    
-        </div>
+    <div id="loading" class="z-50 w-full h-screen fixed top inest-0 bg-white flex justify-center items-center">
+        Loading
+    </div>
+    <div id="main">
 
+        <div class="lg:h-screen h-screen w-full flex overflow-hidden relative overlay">
+            <div class="z-20 absolute z-10 lg:left-14 lg:bottom-14 left-0 bottom-0 p-10 lg:p-0 lg:w-2/5">
+                <h2 class="lg:text-6xl text-4xl pb-5 m-auto font-bold text-white leading-none">
+                    <span lang="id">Selamat Datang Di Jogja</span>
+                    <span lang="en">Welcome To Jogja</span>
+                </h2>
+                <h2 class="lg:text-2xl text-xl m-auto text-white font-thin">Memayu Hayuning Bawana</h2>
+            </div>
+            <video class="absolute z-0 object-cover top-0 left-0" autoplay muted loop id="myVideo">
+                <source src="assets/video/timelapse.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div class="lg:h-4/5 h-4/5 w-full lg:bg-contain bg-cover" id="description-jogja">
+            <div class="flex items-center w-full h-3/4">
+                <span class="text-base lg:text-xl p-7 pl-12 w-2/4 align-middle">
+                    <span lang="id">Jogja adalah provinsi yang berada di Indonesia tepatnya di Pulau Jawa yang mempunyai warisan budaya yang masih sangat kental hingga sekarang.</span>
+                    <span lang="en">Jogja is a province in Indonesia, precisely on the island of Java, which has a very strong cultural heritage to this day.</span>        
+                </span>
+            </div>
+        </div>    
+        <div class="lg:flex lg:justify-end" id="lol-parent">
+            <div class="relative w-full lg:w-1/2 lg:h-screen hidden lg:block" id="lol">
+                <div class="w-full h-full">
+                    <div class="relative h-full" id="text-data-wrapper">
+                        <div class="text-data" id="wisata-text">
+                            <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
+                                <h2 class="text-jumbo font-bold">Wisata</h2>
+                            </div> -->            
+                            <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
+                                <h2 class="font-bold text-5xl" lang="id">Wisata</h2>
+                                <h2 class="font-bold text-5xl" lang="en">Tourist Attraction</h2>
+                                <h2 class="text-base pb-4 pt-4">
+                                    <span lang="id">Yogyakarta terkenal dengan Kota Wisata. Terdapat banyak tempat wisata yang tentu bisa Anda kunjungi. Mulai dari gunung, laut, bangunan sejarah, dan masih banayk lagi</span> 
+                                    <span lang="en">Yogyakarta is famous for the City of Tourism. There are many tourist attractions that you can certainly visit. Starting from mountains, seas, historical buildings, and much more</span> 
+                                    
+                                 </h2>
+                                <a class="text-base" href="#/tourist-attraction"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div class="text-data " id="kuliner-text" style="display: none;">
+                            <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
+                                <h2 class="text-jumbo font-bold">Kuliner</h2>
+                            </div> -->                   
+                            <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
+                                <h2 class="font-bold text-5xl">
+                                    <span lang="id">Kuliner</span> 
+                                    <span lang="en">Culinary</span> 
+                                </h2>
+                                <h2 class="text-base pb-4 pt-4">
+                                    <span lang="id">Yogyakarta juga banyak memiliki kuliner-kuliner daerah. Beragam kuliner yang dibalut dengan cita rasa yang khas siap memanjakan lidah Anda.</span> 
+                                    <span lang="en">Yogyakarta also has many regional cuisines. A variety of culinary delights wrapped with distinctive flavors are ready to pamper your tongue.</span> 
+                                </h2>
+                                <a class="text-base" href="#/culinary"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div class="text-data" id="transportasi-umum-text" style="display: none;">
+                            <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
+                                <h2 class="text-jumbo-2 font-bold">Transportasi</h2>
+                            </div> -->                  
+                            <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
+                                <h2 class="font-bold text-5xl">                            
+                                    <span lang="en">Public Transport</span>
+                                    <span lang="id">Transportsi Umum</span></h2>
+                                <h2 class="text-base pb-4 pt-4">
+                                    <span lang="id">Pemrintah Kota Yogyakarta menyediakan beberapa transportasi umum yang dapat Anda gunakan ketika sedang mengeksplore Jogja.</span> 
+                                    <span lang="en">The Yogyakarta City Government provides several public transportations that you can use when exploring Jogja.</span> 
+                                </h2>
+                                <a class="text-base" href="#/public-transport"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
+                                </svg></a>
+                            </div>
+                        </div>                    
+                        <div class="text-data pb-9 pt-8 pl-6" id="kebudayaan-text" style="display: none;">
+                            <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
+                                <h2 class="text-jumbo font-bold">Budaya</h2>
+                            </div> -->               
+                            <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
+                                <h2 class="font-bold text-5xl">                            <span lang="en">Culture</span>
+                                    <span lang="id">Kebudayaan</span></h2>
+                                    <h2 class="text-base pb-4 pt-4">
+                                        <span lang="id">Kota Yogyakarta dikenal juga dengan kebudayaan yang dimiliki. Masyarakat Yogyakarta sangat ulet dalam melestarikan budaya mereka. Tak heran hingga sekarang budaya tradisional masih ada sampai sekarang</span> 
+                                        <span lang="en">The city of Yogyakarta is also known for its culture. The people of Yogyakarta are very tenacious in preserving their culture. It's no wonder that traditional culture still exists today</span> 
+                                    </h2>
+                                <a class="text-base" href="#/culture"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+            <div class="relative w-full lg:w-1/2 h-full">
+                <div class="relative lg:h-screen h-screen overflow-hidden" id="wisata-banner">
+                    <div class="w-full h-full absolute">
+                        <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
+                            <h2 class="font-bold text-base">
+                                <span lang="en">Tourist Attraction</span>
+                                <span lang="id">Wisata</span>
+                            </h2>
+                            <h2 class="text-base pb-3 pt-3">
+                                <span lang="id">Yogyakarta terkenal dengan Kota Wisata. Terdapat banyak tempat wisata yang tentu bisa Anda kunjungi. Mulai dari gunung, laut, bangunan sejarah, dan masih banayk lagi</span> 
+                                <span lang="en">Yogyakarta is famous for the City of Tourism. There are many tourist attractions that you can certainly visit. Starting from mountains, seas, historical buildings, and much more</span> 
+                            </h2>
+                            <a class="font-bold text-base" href="#/tourist-attraction"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
+                        </div>
+                        <img class="w-full h-full object-cover"  src="assets/img/prambanan.jpg" alt="" srcset="">
+                        
+                    </div>
+                </div>    
+                <div class="relative lg:h-screen h-screen overflow-hidden" id="kuliner-banner">
+                    <div class="w-full h-full absolute">
+                        <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
+                            <h2 class="font-bold text-base">
+                                <span lang="en">Culinary</span>
+                                <span lang="id">Kuliner</span>
+                            </h2>
+                            <h2 class="text-base pb-3 pt-3">
+                                <span lang="id">Yogyakarta juga banyak memiliki kuliner-kuliner daerah. Beragam kuliner yang dibalut dengan cita rasa yang khas siap memanjakan lidah Anda.</span> 
+                                <span lang="en">Yogyakarta also has many regional cuisines. A variety of culinary delights wrapped with distinctive flavors are ready to pamper your tongue.</span> 
+                            </h2>
+                            <a class="font-bold text-base" href="#/culinary"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
+                        </div>
+                        <img class="w-full h-full object-cover" src="assets/img/gudeg.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="relative lg:h-screen h-screen overflow-hidden" id="transportasi-umum-banner">
+                    <div class="w-full h-full absolute">
+                        <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
+                            <h2 class="font-bold text-base">                            <span lang="en">Public Transport</span>
+                                <span lang="id">Transportsi Umum</span></h2>
+                            <h2 class="text-base pb-3 pt-3">
+                                <span lang="id">Pemrintah Kota Yogyakarta menyediakan beberapa transportasi umum yang dapat Anda gunakan ketika sedang mengeksplore Jogja.</span> 
+                                <span lang="en">The Yogyakarta City Government provides several public transportations that you can use when exploring Jogja.</span> 
+                        </h2>
+                            <a class="font-bold text-base" href="#/public-transport"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
+                        </div>                    
+                        <img class="w-full h-full object-cover"  src="assets/img/sepur.jpg" alt="" srcset="">
+                    </div>
+                </div>              
+                <div class="relative lg:h-screen h-screen overflow-hidden" id="kebudayaan-banner">
+                    <div class="w-full h-full absolute">
+                        <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
+                            <h2 class="font-bold text-base">                            <span lang="en">Culture</span>
+                                <span lang="id">Kebudayaan</span></h2>
+                            <h2 class="text-base pb-3 pt-3">                                    
+                                <span lang="id">Kota Yogyakarta dikenal juga dengan kebudayaan yang dimiliki. Masyarakat Yogyakarta sangat ulet dalam melestarikan budaya mereka. Tak heran hingga sekarang budaya tradisional masih ada sampai sekarang</span> 
+                                <span lang="en">The city of Yogyakarta is also known for its culture. The people of Yogyakarta are very tenacious in preserving their culture. It's no wonder that traditional culture still exists today</span> </h2>
+                            <a class="font-bold text-base" href="#/culture"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
+                        </div>
+                        <img class="w-full h-full object-cover"  src="assets/img/wayang.png" alt="" srcset="">
+                    </div>
+                </div> 
+            </div>
+        </div>    
     </div>
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
 </html>

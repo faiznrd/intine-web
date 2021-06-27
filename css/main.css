@@ -12,8 +12,228 @@ video{
     min-width: 100%;
     min-height: 100%;
 }
+#menu-corner .hamburger{
+    padding: 0 !important;
+}
 #description-jogja{
     background: url("../assets/img/tari-serimpi.png") right;
-    background-size: 55%;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+@media (max-width: 460px) {
+    #description-jogja{
+        background: url("../assets/img/tari-serimpi.png") right;
+        background-size: cover;
+        background-position: -50% 0;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width: 891px) {
+    #description-jogja{
+        background: url("../assets/img/tari-serimpi.png") right;
+        background-size: 60%;
+        background-repeat: no-repeat;
+    }
+}
+.bg-bakpia{
+    background-color: #BB8538;
+}
+.bg-bakpia-dark{
+    background-color: #6F6C5F;
+}
+.bg-gudeg{
+    background: url("../assets/img/gudeg.jpg");
+
+}
+.bg-wayang{
+    background: url("../assets/img/wayang_2.png");
+
+}
+.bg-ramayana{
+    background-color: #38281C;
+}
+.bg-sekaten{
+    background-color: #829C89;
+}
+.bg-gudeg-1{
+    background-color: #556928;
+}
+.bg-gudeg-2{
+    background-color: #3E2414;
+}
+.bg-sepur{
+    background: url("../assets/img/sepur.jpg");
+}
+.bg-delman{
+    background-color: #CC8E5F ;
+}
+.bg-becak{
+    background-color: #E4D5CD;
+}
+.bg-becak-dark{
+    background-color: #9EA7AE;
+
+}
+.bg-krl{
+    background-color: #D1735D;
+}
+.bg-krl-dark{
+    background-color: #474238;
+}
+.bg-delman-dark{
+    background-color: #312D1E ;
+}
+.bg-bus{
+    background-color: #91945E;
+}
+.bg-bus-dark{
+    background-color: #40524B;
+}
+.bg-gudeg-coklat{
+    background-color: #2E1A0E;
+}
+.bg-batik{
+    background-color: #856F57;
+}
+.bg-labuhan{
+    background-color: #8AA1B3;
+}
+@media (min-width: 1024px) {
+    .bg-gudeg-2{
+        background-color: #556928;
+    }
+}
+@media (min-width: 1024px) {
+    .h-150{
+        height: 150%;
+    }
+}
+.bg-sate-1{
+    background-color: #967057;
+}
+.bg-sate-2{
+    background-color: #312121;
+}
+@media (min-width: 1024px) {
+    .bg-sate-2{
+        background-color: #967057;
+    }
+}
+.bg-coklat{
+    background-color: #3E2414;
+}
+.bg-sate-coklat{
+    background-color: #312121;
+
+}
+.bg-krecek{
+    background: #AA6937;
+}
+.bg-krecek-coklat{
+    background: #6E210A;
+}
+.o-overflow{
+    overflow-x: hidden;
+}
+.text-jumbo{
+    font-size: 1000%
+}
+.text-jumbo-2{
+    font-size: 900%
+}
+.left-custom{
+    left: -38%;
+}
+.bg-prambanan{
+    background-color: #e0faea;
+}
+.bg-prambanan-2{
+    background-color: #A2A8B0;
+}
+.bg-gray-x{
+    background-color: #B2BCB2;
+}
+.bg-taman-sari{
+    background-color: #D2B799;
+}
+/* Icon 4 */
+ #nav-icon4 {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+ #nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  .hamburger-inner::before{
+      transition: .5s;
+  }  
+  .hamburger-inner::after{
+      transition: .5s;
+  }
+  .hamburger-inner{
+      transition: .5s;
+  }  
+  .white .hamburger-inner::before{
+      transition: .5s;
+      background-color: #fff;
+    }  
+.white .hamburger-inner::after{
+        transition: .5s;
+        background-color: #fff;
+    }
+    .white .hamburger-inner{
+      transition: .5s;
+      background-color: #fff;
+  }
+  #pagescroll {
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+
+}
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+.overlay::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    z-index: 10;
+    background-color: black;
+}
+.bg-prambanan-image{
+    background-image: url(../assets/img/prambanan.jpg);
 }
