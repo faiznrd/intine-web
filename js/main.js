@@ -98,52 +98,74 @@ const DarkMode = () => {
     
 }
 $("#menu-corner").hide()
-Sammy('#main', function() {
-    this.get('#/:page', function() { 
-        AOS.init();
-        if(this.params['page'] == "home"){
-            $("#menu-corner").hide()
+const scrollMiddleware = () => {
+    $(document).on("scroll",function() { 
+        console.log("this.params[]")
+        if($(this).scrollTop() > 0){
+            $("#menu-corner").show();
+        }else{
+            $("#menu-corner").hide();
         }
-        $('#loading').slideToggle()
-        $('#main').load(this.params['page'] + '.html', () =>{
-            $('#loading').slideToggle()
-            if(this.params['page'] == "home"){
-                stickybits("#lol");
-                if ($.cookie('lang')) {
-                    var lang = $.cookie('lang');
-                    console.log(lang)
-                    if (lang === 'en') {
-                        $(".lang-trigger").text("ID")
-                        $('[lang="id"]').hide();
-                    } else {
-                        $(".lang-trigger").text("EN")
-                        $('[lang="en"]').hide();
-                    }
-                }else{
-                    $('[lang="en"]').hide();
-                }
-            }else{
-                $(document).on("scroll",function() { 
-                    if($(this).scrollTop() > 0){
-                        $("#menu-corner").show();
-                    }else{
-                        $("#menu-corner").hide();
-                    }
-                });
-                if ($.cookie('lang')) {
-                    var lang = $.cookie('lang');
-                    console.log(lang)
-                    if (lang === 'en') {
-                        $(".lang-trigger").text("ID")
-                        $('[lang="id"]').hide();
-                    } else {
-                        $(".lang-trigger").text("EN")
-                        $('[lang="en"]').hide();
-                    }
-                }else{
-                    $('[lang="en"]').hide();
-                }
-            }
-        });
     });
+}
+const cookieMiddleware = () => {
+    if ($.cookie('lang')) {
+        var lang = $.cookie('lang');
+        console.log(lang)
+        if (lang === 'en') {
+            $(".lang-trigger").text("ID")
+            $('[lang="id"]').hide();
+        } else {
+            $(".lang-trigger").text("EN")
+            $('[lang="en"]').hide();
+        }
+    }else{
+        $('[lang="en"]').hide();
+    }
+}
+Sammy('#main', function() {
+    this.get('#/home', function() { 
+        $('#loading').slideToggle()
+        $("#main").load("home.html", () => {
+            $('#loading').slideToggle()
+            cookieMiddleware()
+            $(document).off("scroll")
+        })
+    })
+    this.get('#/culinary', function() { 
+        $('#loading').slideToggle()
+        $("#main").load("culinary.html", () => {
+            $('#loading').slideToggle()
+            scrollMiddleware()
+            cookieMiddleware()
+
+        })
+    })
+    this.get('#/culture', function() { 
+        $('#loading').slideToggle()
+        $("#main").load("culture.html", () => {
+            $('#loading').slideToggle()
+            scrollMiddleware()
+            cookieMiddleware()
+
+        })
+    })
+    this.get('#/public-transport', function() { 
+        $('#loading').slideToggle()
+        $("#main").load("public-transport.html", () => {
+            $('#loading').slideToggle()
+            scrollMiddleware()
+            cookieMiddleware()
+
+        })
+    })
+    this.get('#/tourist-attraction', function() { 
+        $('#loading').slideToggle()
+        $("#main").load("tourist-attraction.html", () => {
+            $('#loading').slideToggle()
+            scrollMiddleware()
+            cookieMiddleware()
+
+        })
+    })
 }).run();
