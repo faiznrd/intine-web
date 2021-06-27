@@ -101,12 +101,13 @@ $("#menu-corner").hide()
 Sammy('#main', function() {
     this.get('#/:page', function() { 
         AOS.init();
+        if(this.params['page'] == "home"){
+            $("#menu-corner").hide()
+        }
         $('#loading').slideToggle()
         $('#main').load(this.params['page'] + '.html', () =>{
             $('#loading').slideToggle()
             if(this.params['page'] == "home"){
-                console.log(this.params["page"])
-                $("#menu-corner").hide()
                 stickybits("#lol");
                 if ($.cookie('lang')) {
                     var lang = $.cookie('lang');
@@ -122,6 +123,13 @@ Sammy('#main', function() {
                     $('[lang="en"]').hide();
                 }
             }else{
+                $(document).on("scroll",function() { 
+                    if($(this).scrollTop() > 0){
+                        $("#menu-corner").show();
+                    }else{
+                        $("#menu-corner").hide();
+                    }
+                });
                 if ($.cookie('lang')) {
                     var lang = $.cookie('lang');
                     console.log(lang)
