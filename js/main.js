@@ -47,14 +47,14 @@ $(".lang-trigger").click(function() {
 if ($.cookie('lang')) {
     var lang = $.cookie('lang');
     if (lang === 'en') {
-        $(".lang-trigger").text("ID")
+        $(".lang-trigger").text("EN")
         $('[lang="id"]').hide();
     } else {
-        $(".lang-trigger").text("EN")
+        $(".lang-trigger").text("ID")
       $('[lang="en"]').hide();
     }
 }else{
-    $('[lang="en"]').hide();
+    $('[lang="id"]').hide();
 }
 $(".lang-trigger").addClass("font-bold");
 
@@ -65,24 +65,26 @@ const isDarkModeEnabled = () => {
     return false
 }
 const bannerChange = (selector) => {
-    if(selector.scrollTop() >= $("#wisata-banner").offset().top - 300){
-        $("#text-data-wrapper").css("background", "#AFC2CE")
-        $(".text-data").hide();
-        $("#wisata-text").show();
-    }if(selector.scrollTop() >= $("#kuliner-banner").offset().top - 300){
-        $("#text-data-wrapper").css("background", "#A65B2C")
-        $(".text-data").hide();
-        $("#kuliner-text").show();
-    }
-    if(selector.scrollTop() >= $("#transportasi-umum-banner").offset().top - 300){
-        $("#text-data-wrapper").css("background", "#D5FAEE")
-        $(".text-data").hide();
-        $("#transportasi-umum-text").show();
-    }
-    if(selector.scrollTop() >= $("#kebudayaan-banner").offset().top - 300 ){
-        $("#text-data-wrapper").css("background", "#F3AEA4")
-        $(".text-data").hide();
-        $("#kebudayaan-text").show();
+    if($("#wisata-banner")){
+        if(selector.scrollTop() >= $("#wisata-banner").offset().top - 300){
+            $("#text-data-wrapper").css("background", "#AFC2CE")
+            $(".text-data").hide();
+            $("#wisata-text").show();
+        }if(selector.scrollTop() >= $("#kuliner-banner").offset().top - 300){
+            $("#text-data-wrapper").css("background", "#A65B2C")
+            $(".text-data").hide();
+            $("#kuliner-text").show();
+        }
+        if(selector.scrollTop() >= $("#transportasi-umum-banner").offset().top - 300){
+            $("#text-data-wrapper").css("background", "#D5FAEE")
+            $(".text-data").hide();
+            $("#transportasi-umum-text").show();
+        }
+        if(selector.scrollTop() >= $("#kebudayaan-banner").offset().top - 300 ){
+            $("#text-data-wrapper").css("background", "#F3AEA4")
+            $(".text-data").hide();
+            $("#kebudayaan-text").show();
+        }
     }
 }
 $("#text-data-wrapper").css("background", "#AFC2CE")
@@ -99,8 +101,8 @@ const DarkMode = () => {
 }
 $("#menu-corner").hide()
 const scrollMiddleware = () => {
+    $("#menu-corner").hide();
     $(document).on("scroll",function() { 
-        console.log("this.params[]")
         if($(this).scrollTop() > 0){
             $("#menu-corner").show();
         }else{
@@ -113,10 +115,10 @@ const cookieMiddleware = () => {
         var lang = $.cookie('lang');
         console.log(lang)
         if (lang === 'en') {
-            $(".lang-trigger").text("ID")
+            $(".lang-trigger").text("EN")
             $('[lang="id"]').hide();
         } else {
-            $(".lang-trigger").text("EN")
+            $(".lang-trigger").text("ID")
             $('[lang="en"]').hide();
         }
     }else{
