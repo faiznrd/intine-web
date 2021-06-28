@@ -129,6 +129,7 @@ Sammy('#main', function() {
     this.get('#/home', function() { 
         $('#loading').slideToggle()
         $("#main").load("home.html", () => {
+            stickybits("#lol");
             $('#loading').slideToggle()
             cookieMiddleware()
             $(document).off("scroll")
