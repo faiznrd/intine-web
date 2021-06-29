@@ -237,3 +237,30 @@ video{
 .bg-prambanan-image{
     background-image: url(../assets/img/prambanan.jpg);
 }
+.bg-uwuh{
+    background-color: #aa1101;
+}
+.bg-uwuh-dark{
+    background-color: #9f4e17;
+}
+.bg-wedang-tahu{
+    background-color: #f5f0e0;
+}
+.bg-wedang-tahu-dark{
+    background-color: #8e5b20;
+}
+.toWhite{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
+}
+.bg-jaipong{
+    background-color: #f6c781;
+}
+.bg-jaipong-dark{
+    background-color: #34130c;
+}
+.bg-joss{
+    background-color: #442d25;
+}
+.bg-joss-dark{
+    background-color: #58413b;
+}

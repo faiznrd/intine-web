@@ -1,3 +1,73 @@
+<div class="z-50 h-screen w-full fixed bg-gudeg-1 top-0 left-0 flex items-center justify-center overlay-menu hidden" id="gudeg">
+<div class="flex items-center justify-center h-full">
+    <div>
+        <img src="assets/svg/close.svg" class="toWhite top-5 right-5 absolute button-close" width="25px" alt="">
+        <div class="text-white text-3xl pb-5 font-bold">Komposisi dari Gudeg</div>
+        <ul class="text-white text-xl font-thin list-disc">
+            <li>Bawang merah</li>
+            <li>Bawang putih</li>
+            <li>Ketumbar</li>
+            <li>Gula merah</li>
+            <li>Garam</li>
+            <li>Daun Salam</li>
+            <li>Lengkuas</li>
+            <li >Air asam jawa</li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="z-50 h-screen w-full fixed bg-sate-1 top-0 left-0 flex items-center justify-center overlay-menu hidden" id="klatak">
+<div class="flex items-center justify-center h-full">
+    <div>
+        <img src="assets/svg/close.svg" class="toWhite top-5 right-5 absolute button-close" width="25px" alt="">
+        <div class="text-white text-3xl pb-5 font-bold">Komposisi dari Sate Klatak</div>
+        <ul class="text-white text-xl font-thin list-disc">
+            <li>daging kambing.</li>
+            <li>ati kambing.</li>
+            <li>bawang putih.</li>
+            <li>garam.</li>
+            <li>ketumbar.</li>
+            <li>buah nanas.</li>
+            <li>gelas air.</li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="z-50 h-screen w-full fixed bg-krecek top-0 left-0 flex items-center justify-center overlay-menu hidden" id="krecek">
+<div class="flex items-center justify-center h-full">
+    <div>
+        <img src="assets/svg/close.svg" class="toWhite top-5 right-5 absolute button-close" width="25px" alt="">
+        <div class="text-white text-3xl pb-5 font-bold">Komposisi dari Krecek</div>
+        <ul class="text-white text-xl font-thin list-disc">
+            <li>krecek</li>
+            <li>santan ecer</li>
+            <li>cabai rawit</li>
+            <li>lengkuas</li>
+            <li>daun salam</li>
+            <li>serai</li>
+            <li>minyak goreng</li>
+            <li>gula merah</li>
+            <li>Air secukupnya.</li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="z-50 h-screen w-full fixed bg-bakpia top-0 left-0 flex items-center justify-center overlay-menu hidden" id="bakpia">
+<div class="flex items-center justify-center h-full">
+    <div>
+        <img src="assets/svg/close.svg" class="toWhite top-5 right-5 absolute button-close" width="25px" alt="">
+        <div class="text-white text-3xl pb-5 font-bold">Komposisi dari Bakpia</div>
+        <ul class="text-white text-xl font-thin list-disc">
+            <li>sendok makan gula pasir.</li>
+            <li>sendok makan garam.</li>
+            <li>minyak sayur</li>
+            <li>tepung terigu rendah protein.</li>
+            <li>tepung terigu tinggi protein.</li>
+            <li>air.</li>
+        </ul>
+    </div>
+</div>
+</div>
     <div class="overflow-x-hidden smooth" id="pureFullPage">
         <div class="lg:h-screen h-screen bg-gudeg bg-cover overlay bg-fixed bg-center">
             <div class="z-20 absolute lg:bottom-8 lg:right-8 bottom-8 right-8 lg:w-2/5 text-right">
@@ -7,311 +77,668 @@
                 <span class="lg:text-7xl text-4xl font-bold text-white block" lang="en">Culinary</span>
             </div>
         </div>
-        <div class="overflow-x-hidden relative" id="gudeg-full">
-            <div class="z-10 lg:h-screen h-screen bg-gudeg-1 relative">
-                <div id="gudeg-start" class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9 top-1/4 ">
-                    <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
-                        Gudeg
-                    </div>
-                    <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
-                        <span lang="id">Gudeg adalah kuliner khas dari Provinsi Yogyakarta. Makanan ini terbuat dari nangka muda. Gudeg biasanya disajikan dengan kuah santan kental, ayam kampung, telur, tempe, tahu dan sambal goreng krecek.</span>
-                        <span lang="en">Gudeg is a typical culinary from Yogyakarta Province. This food is made from young jackfruit. Gudeg is usually served with thick coconut milk, free-range chicken, eggs, tempeh, tofu and krecek fried chili sauce.</span>  
-    
-                    </div>            
-                </div>            
-                <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#gudeg-full" class="absolute lg:-bottom-1/2 lg:-right-1/4 -bottom-1/3 right-0 lg:w-3/4 w-full" src="assets/img/gudeg-2.png" alt="" srcset="">
+        <div class="grid grid-cols-2 text-3xl font-bold text-white">
+            <div class="flex items-center justify-center p-9 cursor-pointer bg-gudeg-1" id="makanan-tab">
+                <img src="assets/svg/salad.svg" class="toWhite" width="50px" />
             </div>
-            <div class="z-0 relative lg:h-screen h-screen bg-coklat">
-                <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
-                    <span lang="id">Gudeg adalah kuliner khas dari Provinsi Yogyakarta. Makanan ini terbuat dari nangka muda. Gudeg biasanya disajikan dengan kuah santan kental, ayam kampung, telur, tempe, tahu dan sambal goreng krecek.</span>
-                    <span lang="en">Gudeg is a typical culinary from Yogyakarta Province. This food is made from young jackfruit. Gudeg is usually served with thick coconut milk, free-range chicken, eggs, tempeh, tofu and krecek fried chili sauce.</span>  
-                    
-                </div>
-                <div class="pt-60 pl-9 pr-9">
-                    <div class="text-white text-7xl font-bold lg:hidden pb-5">
-                        <span lang="id">Kisah Singkat</span>
-                        <span lang="en">Short Story</span> 
-                    </div>                            
-                    <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
-                        <span lang="id">Makanan ini ditemukan saat prajurit sedang menebang hutan dan menemukan banyak pohon nangka. Karena jumlah prajurit mereka cukup banyak maka mereka menjadikan nagka tersebut menjadi makanan.</span>
-                        <span lang="en">This food was found when soldiers were cutting down the forest and found many jackfruit trees. Because the number of their soldiers is quite a lot, they make the jackfruit into food.</span> 
-                        
-                    </div>                
-                </div>
-                <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32 bg-gudeg-coklat">                    
-                    <div class="grid grid-cols-2 gap-4 h-full">
-                        
-                        <div class="flex items-center">
-                            <div>
-                                <div class="text-white text-7xl font-bold">
-                                    <span lang="id">Kisah Singkat</span>
-                                    <span lang="en">Short Story</span>  
-                                </div>                  
-                                <div class="text-white text-3xl">
-                                    Gudeg
-                                </div>    
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
-                                <span lang="id">
-                                    Makanan ini ditemukan saat prajurit sedang menebang hutan dan menemukan banyak pohon nangka. Karena jumlah prajurit mereka cukup banyak maka mereka menjadikan nagka tersebut menjadi makanan.
-                                </span>
-                                <span lang="en">
-                                    This food was found when soldiers were cutting down the forest and found many jackfruit trees. Because the number of their soldiers is quite a lot, they make the jackfruit into food.
-                                </span>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex items-center justify-center p-9 cursor-pointer bg-uwuh" id="minuman-tab">
+                <img src="assets/svg/drinks.svg" class="toWhite" width="50px" />
             </div>
         </div>
-        <div class="overflow-x-hidden" id="sate-full">
-            <div class="z-10 lg:h-screen h-screen relative bg-sate-1">
-                <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9" id="sate-start">
-                    <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
-                        <span lang="id">
-                            Sate Klatak
+        <div id="makanan" class="">
+            <div class="overflow-x-hidden relative" id="gudeg-full">
+                <div class="z-10 lg:h-screen h-screen bg-gudeg-1 relative">
+                    <div id="gudeg-start" class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9 top-1/4 ">
+                        <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
+                            Gudeg
+                        </div>
+                        <span class="font-thin text-xl text-white cursor-pointer button-open" id="gudeg-open">
+                            <span lang="id">Lihat Komposisi</span>
+                            <span lang="en">See the Composition</span>
+                            <svg class="inline" width="30" height="14" viewBox="0 0 57 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="white"/>
+                            </svg>
                         </span>
-                        <span lang="en">
-                            Klatak Satay
+                        <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">Gudeg adalah kuliner khas dari Provinsi Yogyakarta. Makanan ini terbuat dari nangka muda. Gudeg biasanya disajikan dengan kuah santan kental, ayam kampung, telur, tempe, tahu dan sambal goreng krecek.</span>
+                            <span lang="en">Gudeg is a typical culinary from Yogyakarta Province. This food is made from young jackfruit. Gudeg is usually served with thick coconut milk, free-range chicken, eggs, tempeh, tofu and krecek fried chili sauce.</span>  
+        
+                        </div>            
+                    </div>            
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#gudeg-full" class="absolute lg:-bottom-1/2 lg:-right-1/4 -bottom-1/3 right-0 lg:w-3/4 w-full" src="assets/img/gudeg-2.png" alt="" srcset="">
+                </div>
+                <div class="z-0 relative lg:h-screen h-screen bg-coklat">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
+                        <span lang="id">Gudeg adalah kuliner khas dari Provinsi Yogyakarta. Makanan ini terbuat dari nangka muda. Gudeg biasanya disajikan dengan kuah santan kental, ayam kampung, telur, tempe, tahu dan sambal goreng krecek.</span>
+                        <span lang="en">Gudeg is a typical culinary from Yogyakarta Province. This food is made from young jackfruit. Gudeg is usually served with thick coconut milk, free-range chicken, eggs, tempeh, tofu and krecek fried chili sauce.</span>  
+                        
+                    </div>
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">Kisah Singkat</span>
+                            <span lang="en">Short Story</span> 
+                        </div>                            
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">Makanan ini ditemukan saat prajurit sedang menebang hutan dan menemukan banyak pohon nangka. Karena jumlah prajurit mereka cukup banyak maka mereka menjadikan nagka tersebut menjadi makanan.</span>
+                            <span lang="en">This food was found when soldiers were cutting down the forest and found many jackfruit trees. Because the number of their soldiers is quite a lot, they make the jackfruit into food.</span> 
+                            
+                        </div>                
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32 bg-gudeg-coklat">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">Kisah Singkat</span>
+                                        <span lang="en">Short Story</span>  
+                                    </div>                  
+                                    <div class="text-white text-3xl">
+                                        Gudeg
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
+                                    <span lang="id">
+                                        Makanan ini ditemukan saat prajurit sedang menebang hutan dan menemukan banyak pohon nangka. Karena jumlah prajurit mereka cukup banyak maka mereka menjadikan nagka tersebut menjadi makanan.
+                                    </span>
+                                    <span lang="en">
+                                        This food was found when soldiers were cutting down the forest and found many jackfruit trees. Because the number of their soldiers is quite a lot, they make the jackfruit into food.
+                                    </span>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-x-hidden" id="sate-full">
+                <div class="z-10 lg:h-screen h-screen relative bg-sate-1">
+                    <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9" id="sate-start">
+                        <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
+                            <span lang="id">
+                                Sate Klatak
+                            </span>
+                            <span lang="en">
+                                Klatak Satay
+                            </span>
+                        </div>    
+                        <span class="font-thin text-xl text-white cursor-pointer" id="klatak-open">
+                            <span lang="id">Lihat Komposisi</span>
+                            <span lang="en">See the Composition</span>
+                            <svg class="inline" width="30" height="14" viewBox="0 0 57 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="white"/>
+                            </svg>
                         </span>
-                    </div>    
-                    <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                        <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">
+                                Sate Klatak adalah sate kambing yang berasal dari Kecamatan Pleret, Kabupaten Bantul, Yogyakarta. Sate ini berbeda pada umumnya karena bumbu dan sate ini ditusuk dengan besi.
+                            </span>                        
+                            <span lang="en">
+                                Sate Klatak is goat satay originating from Pleret District, Bantul Regency, Yogyakarta. This satay is different in general because the spices and the satay are stabbed with an iron.
+                            </span>
+                        </div>            
+                    </div>
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#sate-start" class="absolute lg:-bottom-1/4 lg:-right-1/3 lg:-bottom-1/2 -bottom-36 right-0 lg:w-full w-full" src="assets/img/sate-klatak.png" alt="" srcset="">
+                </div>
+                <div class="z-0 relative lg:h-screen h-screen bg-sate-coklat">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
                         <span lang="id">
                             Sate Klatak adalah sate kambing yang berasal dari Kecamatan Pleret, Kabupaten Bantul, Yogyakarta. Sate ini berbeda pada umumnya karena bumbu dan sate ini ditusuk dengan besi.
                         </span>                        
                         <span lang="en">
                             Sate Klatak is goat satay originating from Pleret District, Bantul Regency, Yogyakarta. This satay is different in general because the spices and the satay are stabbed with an iron.
                         </span>
-                    </div>            
-                </div>
-                <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#sate-start" class="absolute lg:-bottom-1/4 lg:-right-1/3 lg:-bottom-1/2 -bottom-36 right-0 lg:w-full w-full" src="assets/img/sate-klatak.png" alt="" srcset="">
-            </div>
-            <div class="z-0 relative lg:h-screen h-screen bg-sate-coklat">
-                <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
-                    <span lang="id">
-                        Sate Klatak adalah sate kambing yang berasal dari Kecamatan Pleret, Kabupaten Bantul, Yogyakarta. Sate ini berbeda pada umumnya karena bumbu dan sate ini ditusuk dengan besi.
-                    </span>                        
-                    <span lang="en">
-                        Sate Klatak is goat satay originating from Pleret District, Bantul Regency, Yogyakarta. This satay is different in general because the spices and the satay are stabbed with an iron.
-                    </span>
-                </div>
-                <div class="pt-60 pl-9 pr-9">
-                    <div class="text-white text-7xl font-bold lg:hidden pb-5">
-                        <span lang="id">
-                            Kisah Singkat
-                        </span>
-                        <span lang="en">
-                            Short Story
-                        </span>
-                    </div>  
-                    <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
-                        <span lang="id">
-                            Kata "Sate Klatak" sendiri berasal dari seorang penjual yang berjualan di bawah pohon Melinjo yang buah nya disebut Klatak. Buah klatak ini berjatuhan di tempat penjual tersebut sehingga disebut Sate Klatak.
-                        </span>
-                        <span lang="en">
-                            The word "Sate Klatak" itself comes from a seller who sells under the Melinjo tree whose fruit is called Klatak. This klatak fruit fell at the seller's place so it was called Sate Klatak.
-                        </span>
                     </div>
-                </div>
-                <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
-                    <div class="grid grid-cols-2 gap-4 h-full">
-                        
-                        <div class="flex items-center">
-                            <div>
-                                <div class="text-white text-7xl font-bold">
-                                    <span lang="id">
-                                        Kisah Singkat
-                                    </span>
-                                    <span lang="en">
-                                        Short Story
-                                    </span>
-                                </div>                              
-                                <div class="text-white text-3xl">
-                                    <span lang="id">
-                                        Sate Klatak
-                                    </span>
-                                    <span lang="en">
-                                        Klatak Satay
-                                    </span>
-                                </div>    
-                            </div>
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">
+                                Kisah Singkat
+                            </span>
+                            <span lang="en">
+                                Short Story
+                            </span>
+                        </div>  
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">
+                                Kata "Sate Klatak" sendiri berasal dari seorang penjual yang berjualan di bawah pohon Melinjo yang buah nya disebut Klatak. Buah klatak ini berjatuhan di tempat penjual tersebut sehingga disebut Sate Klatak.
+                            </span>
+                            <span lang="en">
+                                The word "Sate Klatak" itself comes from a seller who sells under the Melinjo tree whose fruit is called Klatak. This klatak fruit fell at the seller's place so it was called Sate Klatak.
+                            </span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
-                                <span lang="id">
-                                    Kata "Sate Klatak" sendiri berasal dari seorang penjual yang berjualan di bawah pohon Melinjo yang buah nya disebut Klatak. Buah klatak ini berjatuhan di tempat penjual tersebut sehingga disebut Sate Klatak.
-                                </span>
-                                <span lang="en">
-                                    The word "Sate Klatak" itself comes from a seller who sells under the Melinjo tree whose fruit is called Klatak. This klatak fruit fell at the seller's place so it was called Sate Klatak.
-                                </span>
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">
+                                            Kisah Singkat
+                                        </span>
+                                        <span lang="en">
+                                            Short Story
+                                        </span>
+                                    </div>                              
+                                    <div class="text-white text-3xl">
+                                        <span lang="id">
+                                            Sate Klatak
+                                        </span>
+                                        <span lang="en">
+                                            Klatak Satay
+                                        </span>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
+                                    <span lang="id">
+                                        Kata "Sate Klatak" sendiri berasal dari seorang penjual yang berjualan di bawah pohon Melinjo yang buah nya disebut Klatak. Buah klatak ini berjatuhan di tempat penjual tersebut sehingga disebut Sate Klatak.
+                                    </span>
+                                    <span lang="en">
+                                        The word "Sate Klatak" itself comes from a seller who sells under the Melinjo tree whose fruit is called Klatak. This klatak fruit fell at the seller's place so it was called Sate Klatak.
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="overflow-x-hidden" id="krecek-full">
-            <div class="z-10 lg:h-screen h-screen relative bg-krecek " id="krecek-start">
-                <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9">
-                    <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
-                        Krecek
-                    </div>            
-                    <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+            <div class="overflow-x-hidden" id="krecek-full">
+                <div class="z-10 lg:h-screen h-screen relative bg-krecek " id="krecek-start">
+                    <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9">
+                        <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
+                            Krecek
+                        </div>            
+                        <span class="font-thin text-xl text-white cursor-pointer" id="krecek-open">
+                            <span lang="id">Lihat Komposisi</span>
+                            <span lang="en">See the Composition</span>
+                            <svg class="inline" width="30" height="14" viewBox="0 0 57 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="white"/>
+                            </svg>
+                        </span>
+                        <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">
+                                Kerecek adalah kulit sapi yang dikeringkan yang dapat digunakan dalam masakan dan dapat digunakan sebagai kerupuk. 
+                            </span>
+                            <span lang="en">
+                                Kerecek is dried cow skin that can be used in cooking and can be used as crackers.
+                            </span>                           
+                        </div>            
+                    </div>
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#krecek-start" class="absolute lg:-bottom-1/4 lg:-right-1/4 lg:-bottom-1/2 -bottom-1/4 right-0 lg:w-full w-full" src="assets/img/krecek.png" alt="" srcset="">
+                </div>
+                <div class="z-0 relative lg:h-screen h-screen bg-krecek-coklat">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
                         <span lang="id">
                             Kerecek adalah kulit sapi yang dikeringkan yang dapat digunakan dalam masakan dan dapat digunakan sebagai kerupuk. 
                         </span>
                         <span lang="en">
                             Kerecek is dried cow skin that can be used in cooking and can be used as crackers.
-                        </span>                           
-                    </div>            
-                </div>
-                <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#krecek-start" class="absolute lg:-bottom-1/4 lg:-right-1/4 lg:-bottom-1/2 -bottom-1/4 right-0 lg:w-full w-full" src="assets/img/krecek.png" alt="" srcset="">
-            </div>
-            <div class="z-0 relative lg:h-screen h-screen bg-krecek-coklat">
-                <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
-                    <span lang="id">
-                        Kerecek adalah kulit sapi yang dikeringkan yang dapat digunakan dalam masakan dan dapat digunakan sebagai kerupuk. 
-                    </span>
-                    <span lang="en">
-                        Kerecek is dried cow skin that can be used in cooking and can be used as crackers.
-                    </span>                     
-                </div>
-                <div class="pt-60 pl-9 pr-9">
-                    <div class="text-white text-7xl font-bold lg:hidden pb-5">
-                        <span lang="id">
-                            Kisah Singkat
-                        </span>
-                        <span lang="en">
-                            Short Story
-                        </span>                        
-                    </div>                
-                    <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
-                        <span lang="id">
-                            Belum diketahui asal usul dari Krecek. Namun krecek ini selalu ada bersama hidangan Gudeg.
-                        </span>
-                        <span lang="en">
-                            The origin of Krecek is not yet known. But this krecek is always there with Gudeg dishes.
-                        </span>
+                        </span>                     
                     </div>
-                </div>
-                <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
-                    <div class="grid grid-cols-2 gap-4 h-full">
-                        
-                        <div class="flex items-center">
-                            <div>
-                                <div class="text-white text-7xl font-bold">
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">
+                                Kisah Singkat
+                            </span>
+                            <span lang="en">
+                                Short Story
+                            </span>                        
+                        </div>                
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">
+                                Belum diketahui asal usul dari Krecek. Namun krecek ini selalu ada bersama hidangan Gudeg.
+                            </span>
+                            <span lang="en">
+                                The origin of Krecek is not yet known. But this krecek is always there with Gudeg dishes.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">
+                                            Kisah Singkat
+                                        </span>
+                                        <span lang="en">
+                                            Short Story
+                                        </span>
+                                    </div>                              
+                                    <div class="text-white text-3xl">
+                                        Krecek
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
                                     <span lang="id">
-                                        Kisah Singkat
+                                        Belum diketahui asal usul dari Krecek. Namun krecek ini selalu ada bersama hidangan Gudeg.
                                     </span>
                                     <span lang="en">
-                                        Short Story
-                                    </span>
-                                </div>                              
-                                <div class="text-white text-3xl">
-                                    Krecek
-                                </div>    
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
-                                <span lang="id">
-                                    Belum diketahui asal usul dari Krecek. Namun krecek ini selalu ada bersama hidangan Gudeg.
-                                </span>
-                                <span lang="en">
-                                    The origin of Krecek is not yet known. But this krecek is always there with Gudeg dishes.
-                                </span>                                
+                                        The origin of Krecek is not yet known. But this krecek is always there with Gudeg dishes.
+                                    </span>                                
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <div class="overflow-x-hidden" id="bakpia-full">
-            <div class="z-10 lg:h-screen h-screen relative bg-bakpia ">
-                <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9" id="bakpia-start">
-                    <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
-                        Bakpia
-                    </div>            
-                    <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+            <div class="overflow-x-hidden" id="bakpia-full">
+                <div class="z-10 lg:h-screen h-screen relative bg-bakpia ">
+                    <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9" id="bakpia-start">
+                        <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
+                            Bakpia
+                        </div>          
+                        <span class="font-thin text-xl text-white cursor-pointer" id="bakpia-open">
+                            <span lang="id">Lihat Komposisi</span>
+                            <span lang="en">See the Composition</span>
+                            <svg class="inline" width="30" height="14" viewBox="0 0 57 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="white"/>
+                            </svg>
+                        </span>  
+                        <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">Bakpia adalah kue yang di dalamnya terdapat isian kacang hijau dengan gula yang di balut dengan tepung.</span>
+                            <span lang="en">Bakpia is a cake in which there is a filling of green beans with sugar wrapped in flour.</span>
+                        </div>            
+                    </div>
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#bakpia-start" class="absolute lg:-bottom-2/5 lg:-right-1/4 lg:-bottom-1/2 -bottom-1/4 right-0 lg:w-3/4 w-full" src="assets/img/bakpia.png" alt="" srcset="">
+                </div>
+                <div class="z-0 relative lg:h-screen h-screen bg-bakpia-dark">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
                         <span lang="id">Bakpia adalah kue yang di dalamnya terdapat isian kacang hijau dengan gula yang di balut dengan tepung.</span>
                         <span lang="en">Bakpia is a cake in which there is a filling of green beans with sugar wrapped in flour.</span>
-                    </div>            
-                </div>
-                <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#bakpia-start" class="absolute lg:-bottom-2/5 lg:-right-1/4 lg:-bottom-1/2 -bottom-1/4 right-0 lg:w-3/4 w-full" src="assets/img/bakpia.png" alt="" srcset="">
-            </div>
-            <div class="z-0 relative lg:h-screen h-screen bg-bakpia-dark">
-                <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
-                    <span lang="id">Bakpia adalah kue yang di dalamnya terdapat isian kacang hijau dengan gula yang di balut dengan tepung.</span>
-                    <span lang="en">Bakpia is a cake in which there is a filling of green beans with sugar wrapped in flour.</span>
-                </div>
-                <div class="pt-60 pl-9 pr-9">
-                    <div class="text-white text-7xl font-bold lg:hidden pb-5">
-                        <span lang="id">
-                            Kisah Singkat
-                        </span>
-                        <span lang="en">
-                            Short Story
-                        </span>
-                    </div>                
-                    <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
-                        <span lang="id">Kata Bakpia adalah kata yang berasal dari Bahasa Tionghoa dialek Hokkian yaitu dari kata bak yang artinya daging dan pia yang artinya kue</span>
-                        <span lang="en">The word Bakpia is a word that comes from the Chinese Hokkien dialect, namely from the word bak which means meat and pia which means cake.</span>
+                    </div>
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">
+                                Kisah Singkat
+                            </span>
+                            <span lang="en">
+                                Short Story
+                            </span>
+                        </div>                
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">Kata Bakpia adalah kata yang berasal dari Bahasa Tionghoa dialek Hokkian yaitu dari kata bak yang artinya daging dan pia yang artinya kue</span>
+                            <span lang="en">The word Bakpia is a word that comes from the Chinese Hokkien dialect, namely from the word bak which means meat and pia which means cake.</span>
+                        </div>
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">
+                                            Kisah Singkat
+                                        </span>
+                                        <span lang="en">
+                                            Short Story
+                                        </span>
+                                    </div>                              
+                                    <div class="text-white text-3xl">
+                                        Bakpia
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
+                                    <span lang="id">Kata Bakpia adalah kata yang berasal dari Bahasa Tionghoa dialek Hokkian yaitu dari kata bak yang artinya daging dan pia yang artinya kue</span>
+                                    <span lang="en">The word Bakpia is a word that comes from the Chinese Hokkien dialect, namely from the word bak which means meat and pia which means cake.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
-                    <div class="grid grid-cols-2 gap-4 h-full">
-                        
-                        <div class="flex items-center">
-                            <div>
-                                <div class="text-white text-7xl font-bold">
-                                    <span lang="id">
-                                        Kisah Singkat
-                                    </span>
-                                    <span lang="en">
-                                        Short Story
-                                    </span>
-                                </div>                              
-                                <div class="text-white text-3xl">
-                                    Bakpia
-                                </div>    
-                            </div>
+            </div>
+            <div class="lg:h-auto">
+                <div class="w-full border-t-2">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
+                        <div class="flex items-center">                        
+                            <div class="lg:text-4xl text-2xl font-bold">Gudeg Yu Djum</div>
+                        </div>            
+                        <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Gudeg%20Mbok%20Djum&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+                <div class="w-full border-t-2">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
+                        <div class="flex items-center">                            
+                            <div class="lg:text-4xl text-2xl font-bold">Bakpia Pathok 25</div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
-                                <span lang="id">Kata Bakpia adalah kata yang berasal dari Bahasa Tionghoa dialek Hokkian yaitu dari kata bak yang artinya daging dan pia yang artinya kue</span>
-                                <span lang="en">The word Bakpia is a word that comes from the Chinese Hokkien dialect, namely from the word bak which means meat and pia which means cake.</span>
-                            </div>
-                        </div>
+                        <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Bakpia%20Pathok%2025&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>  
+                </div>
+                <div class="w-full border-t-2">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
+                        <div class="flex items-center">                        
+                            <div class="lg:text-4xl text-2xl font-bold">Sate Klathak Pak Pong</div>
+                        </div>                    
+                        <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Sate%20Klathak%20Pak%20Pong&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lg:h-auto">
-            <div class="w-full border-t-2">
-                <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
-                    <div class="flex items-center">                        
-                        <div class="lg:text-4xl text-2xl font-bold">Gudeg Yu Djum</div>
+        <div id="minuman" class="hidden">
+            <div class="overflow-x-hidden relative" id="uwuh-full">
+                <div class="z-10 lg:h-screen h-screen bg-uwuh relative">
+                    <div id="gudeg-start" class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9 top-1/4 ">
+                        <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
+                            Wedang Ronde
+                        </div>
+                        <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">Gudeg adalah kuliner khas dari Provinsi Yogyakarta. Makanan ini terbuat dari nangka muda. Gudeg biasanya disajikan dengan kuah santan kental, ayam kampung, telur, tempe, tahu dan sambal goreng krecek.</span>
+                            <span lang="en">Gudeg is a typical culinary from Yogyakarta Province. This food is made from young jackfruit. Gudeg is usually served with thick coconut milk, free-range chicken, eggs, tempeh, tofu and krecek fried chili sauce.</span>  
+        
+                        </div>            
                     </div>            
-                    <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Gudeg%20Mbok%20Djum&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#gudeg-full" class="absolute lg:-bottom-1/4 lg:-right-1/4 -bottom-1/4 right-0 lg:w-3/4 w-full" src="assets/img/uwuh.png" alt="" srcset="">
                 </div>
-            </div>
-            <div class="w-full border-t-2">
-                <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
-                    <div class="flex items-center">                            
-                        <div class="lg:text-4xl text-2xl font-bold">Bakpia Pathok 25</div>
+                <div class="z-0 relative lg:h-screen h-screen bg-uwuh-dark">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
+                        <span lang="id">Gudeg adalah kuliner khas dari Provinsi Yogyakarta. Makanan ini terbuat dari nangka muda. Gudeg biasanya disajikan dengan kuah santan kental, ayam kampung, telur, tempe, tahu dan sambal goreng krecek.</span>
+                        <span lang="en">Gudeg is a typical culinary from Yogyakarta Province. This food is made from young jackfruit. Gudeg is usually served with thick coconut milk, free-range chicken, eggs, tempeh, tofu and krecek fried chili sauce.</span>  
+                        
                     </div>
-                    <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Bakpia%20Pathok%2025&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>  
-            </div>
-            <div class="w-full border-t-2">
-                <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
-                    <div class="flex items-center">                        
-                        <div class="lg:text-4xl text-2xl font-bold">Sate Klathak Pak Pong</div>
-                    </div>                    
-                    <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Sate%20Klathak%20Pak%20Pong&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">Kisah Singkat</span>
+                            <span lang="en">Short Story</span> 
+                        </div>                            
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">Makanan ini ditemukan saat prajurit sedang menebang hutan dan menemukan banyak pohon nangka. Karena jumlah prajurit mereka cukup banyak maka mereka menjadikan nagka tersebut menjadi makanan.</span>
+                            <span lang="en">This food was found when soldiers were cutting down the forest and found many jackfruit trees. Because the number of their soldiers is quite a lot, they make the jackfruit into food.</span> 
+                            
+                        </div>                
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">Kisah Singkat</span>
+                                        <span lang="en">Short Story</span>  
+                                    </div>                  
+                                    <div class="text-white text-3xl">
+                                        Gudeg
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
+                                    <span lang="id">
+                                        Makanan ini ditemukan saat prajurit sedang menebang hutan dan menemukan banyak pohon nangka. Karena jumlah prajurit mereka cukup banyak maka mereka menjadikan nagka tersebut menjadi makanan.
+                                    </span>
+                                    <span lang="en">
+                                        This food was found when soldiers were cutting down the forest and found many jackfruit trees. Because the number of their soldiers is quite a lot, they make the jackfruit into food.
+                                    </span>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>   
+            <div class="overflow-x-hidden" id="tahu-full">
+                <div class="z-10 lg:h-screen h-screen relative bg-wedang-tahu">
+                    <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9" id="sate-start">
+                        <div class="font-bold w-2/5 text-black lg:text-9xl text-7xl leading-none">
+                            <span lang="id">
+                                Wedang Tahu
+                            </span>
+                            <span lang="en">
+                                Wedang Tahu
+                            </span>
+                        </div>    
+                        <div class="lg:absolute lg:p-0 pt-5 text-black text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">
+                                Sate Klatak adalah sate kambing yang berasal dari Kecamatan Pleret, Kabupaten Bantul, Yogyakarta. Sate ini berbeda pada umumnya karena bumbu dan sate ini ditusuk dengan besi.
+                            </span>                        
+                            <span lang="en">
+                                Sate Klatak is goat satay originating from Pleret District, Bantul Regency, Yogyakarta. This satay is different in general because the spices and the satay are stabbed with an iron.
+                            </span>
+                        </div>            
+                    </div>
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#tahu-start" class="absolute lg:-bottom-1/4 lg:-right-1/3 lg:-bottom-1/3 -bottom-1/4 right-0 lg:w-3/4 w-full" src="assets/img/wedang-tahu.png" alt="" srcset="">
+                </div>
+                <div class="z-0 relative lg:h-screen h-screen bg-wedang-tahu-dark">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
+                        <span lang="id">
+                            Sate Klatak adalah sate kambing yang berasal dari Kecamatan Pleret, Kabupaten Bantul, Yogyakarta. Sate ini berbeda pada umumnya karena bumbu dan sate ini ditusuk dengan besi.
+                        </span>                        
+                        <span lang="en">
+                            Sate Klatak is goat satay originating from Pleret District, Bantul Regency, Yogyakarta. This satay is different in general because the spices and the satay are stabbed with an iron.
+                        </span>
+                    </div>
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">
+                                Kisah Singkat
+                            </span>
+                            <span lang="en">
+                                Short Story
+                            </span>
+                        </div>  
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">
+                                Kata "Sate Klatak" sendiri berasal dari seorang penjual yang berjualan di bawah pohon Melinjo yang buah nya disebut Klatak. Buah klatak ini berjatuhan di tempat penjual tersebut sehingga disebut Sate Klatak.
+                            </span>
+                            <span lang="en">
+                                The word "Sate Klatak" itself comes from a seller who sells under the Melinjo tree whose fruit is called Klatak. This klatak fruit fell at the seller's place so it was called Sate Klatak.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">
+                                            Kisah Singkat
+                                        </span>
+                                        <span lang="en">
+                                            Short Story
+                                        </span>
+                                    </div>                              
+                                    <div class="text-white text-3xl">
+                                        <span lang="id">
+                                            Sate Klatak
+                                        </span>
+                                        <span lang="en">
+                                            Klatak Satay
+                                        </span>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
+                                    <span lang="id">
+                                        Kata "Sate Klatak" sendiri berasal dari seorang penjual yang berjualan di bawah pohon Melinjo yang buah nya disebut Klatak. Buah klatak ini berjatuhan di tempat penjual tersebut sehingga disebut Sate Klatak.
+                                    </span>
+                                    <span lang="en">
+                                        The word "Sate Klatak" itself comes from a seller who sells under the Melinjo tree whose fruit is called Klatak. This klatak fruit fell at the seller's place so it was called Sate Klatak.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-x-hidden" id="jaipong-full">
+                <div class="z-10 lg:h-screen h-screen relative bg-jaipong " id="krecek-start">
+                    <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9">
+                        <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
+                            Jaipong
+                        </div>            
+                        <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">
+                                Kerecek adalah kulit sapi yang dikeringkan yang dapat digunakan dalam masakan dan dapat digunakan sebagai kerupuk. 
+                            </span>
+                            <span lang="en">
+                                Kerecek is dried cow skin that can be used in cooking and can be used as crackers.
+                            </span>                           
+                        </div>            
+                    </div>
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#jaipong-start" class="absolute lg:-bottom-1/4 lg:-right-1/4 lg:-bottom-1/2 -bottom-1/4 right-0 lg:w-3/4 w-full" src="assets/img/jaipong.png" alt="" srcset="">
+                </div>
+                <div class="z-0 relative lg:h-screen h-screen bg-jaipong-dark">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
+                        <span lang="id">
+                            Kerecek adalah kulit sapi yang dikeringkan yang dapat digunakan dalam masakan dan dapat digunakan sebagai kerupuk. 
+                        </span>
+                        <span lang="en">
+                            Kerecek is dried cow skin that can be used in cooking and can be used as crackers.
+                        </span>                     
+                    </div>
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">
+                                Kisah Singkat
+                            </span>
+                            <span lang="en">
+                                Short Story
+                            </span>                        
+                        </div>                
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">
+                                Belum diketahui asal usul dari Krecek. Namun krecek ini selalu ada bersama hidangan Gudeg.
+                            </span>
+                            <span lang="en">
+                                The origin of Krecek is not yet known. But this krecek is always there with Gudeg dishes.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">
+                                            Kisah Singkat
+                                        </span>
+                                        <span lang="en">
+                                            Short Story
+                                        </span>
+                                    </div>                              
+                                    <div class="text-white text-3xl">
+                                        Krecek
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
+                                    <span lang="id">
+                                        Belum diketahui asal usul dari Krecek. Namun krecek ini selalu ada bersama hidangan Gudeg.
+                                    </span>
+                                    <span lang="en">
+                                        The origin of Krecek is not yet known. But this krecek is always there with Gudeg dishes.
+                                    </span>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="overflow-x-hidden" id="joss-full">
+                <div class="z-10 lg:h-screen h-screen relative bg-joss ">
+                    <div class="lg:p-0 lg:p-32 pt-32 pl-9 pr-9" id="bakpia-start">
+                        <div class="font-bold w-2/5 text-white lg:text-9xl text-7xl leading-none">
+                            <span lang="id">
+                                Kopi Joss
+                            </span>
+                            <span lang="en">
+                                Joss Coffee
+                            </span>
+                        </div>            
+                        <div class="lg:absolute lg:p-0 pt-5 text-white text-xl font-thin bottom-1/3 left-5 lg:hidden">
+                            <span lang="id">Bakpia adalah kue yang di dalamnya terdapat isian kacang hijau dengan gula yang di balut dengan tepung.</span>
+                            <span lang="en">Bakpia is a cake in which there is a filling of green beans with sugar wrapped in flour.</span>
+                        </div>            
+                    </div>
+                    <img data-aos="slide-left" data-aos-duration="7000" data-aos-anchor="#joss-start" class="absolute lg:-bottom-2/5 lg:-right-1/4 lg:-bottom-1/2 -bottom-1/4 right-0 lg:w-3/5 w-full" src="assets/img/joss.png" alt="" srcset="">
+                </div>
+                <div class="z-0 relative lg:h-screen h-screen bg-joss-dark">
+                    <div class="text-white text-xl font-thin p-32 pl-32 w-2/4 lg:block hidden">
+                        <span lang="id">Bakpia adalah kue yang di dalamnya terdapat isian kacang hijau dengan gula yang di balut dengan tepung.</span>
+                        <span lang="en">Bakpia is a cake in which there is a filling of green beans with sugar wrapped in flour.</span>
+                    </div>
+                    <div class="pt-60 pl-9 pr-9">
+                        <div class="text-white text-7xl font-bold lg:hidden pb-5">
+                            <span lang="id">
+                                Kisah Singkat
+                            </span>
+                            <span lang="en">
+                                Short Story
+                            </span>
+                        </div>                
+                        <div class="lg:w-1/3 text-white text-xl font-thin bottom-1/4 left-5 lg:hidden">
+                            <span lang="id">Kata Bakpia adalah kata yang berasal dari Bahasa Tionghoa dialek Hokkian yaitu dari kata bak yang artinya daging dan pia yang artinya kue</span>
+                            <span lang="en">The word Bakpia is a word that comes from the Chinese Hokkien dialect, namely from the word bak which means meat and pia which means cake.</span>
+                        </div>
+                    </div>
+                    <div class="lg:absolute lg:w-full lg:h-1/2 lg:bottom-0 lg:block hidden p-9 pl-32 pr-32">                    
+                        <div class="grid grid-cols-2 gap-4 h-full">
+                            
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-white text-7xl font-bold">
+                                        <span lang="id">
+                                            Kisah Singkat
+                                        </span>
+                                        <span lang="en">
+                                            Short Story
+                                        </span>
+                                    </div>                              
+                                    <div class="text-white text-3xl">
+                                        <span lang="id">
+                                            Kopi Joss
+                                        </span>
+                                        <span lang="en">
+                                            Joss Coffee
+                                        </span>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="lg:w-full text-white text-xl font-thin left-5 p-5">
+                                    <span lang="id">Kata Bakpia adalah kata yang berasal dari Bahasa Tionghoa dialek Hokkian yaitu dari kata bak yang artinya daging dan pia yang artinya kue</span>
+                                    <span lang="en">The word Bakpia is a word that comes from the Chinese Hokkien dialect, namely from the word bak which means meat and pia which means cake.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:h-auto">
+                <div class="w-full border-t-2">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
+                        <div class="flex items-center">                        
+                            <div class="lg:text-4xl text-2xl font-bold">Gudeg Yu Djum</div>
+                        </div>            
+                        <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Gudeg%20Mbok%20Djum&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+                <div class="w-full border-t-2">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
+                        <div class="flex items-center">                            
+                            <div class="lg:text-4xl text-2xl font-bold">Bakpia Pathok 25</div>
+                        </div>
+                        <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Bakpia%20Pathok%2025&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>  
+                </div>
+                <div class="w-full border-t-2">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 p-9">
+                        <div class="flex items-center">                        
+                            <div class="lg:text-4xl text-2xl font-bold">Sate Klathak Pak Pong</div>
+                        </div>                    
+                        <iframe class="w-full h-72" id="gmap_canvas" src="https://maps.google.com/maps?q=Sate%20Klathak%20Pak%20Pong&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 

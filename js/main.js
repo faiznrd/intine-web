@@ -129,6 +129,7 @@ Sammy('#main', function() {
     this.get('#/home', function() { 
         $('#loading').slideToggle()
         $("#main").load("home.html", () => {
+            stickybits("#lol");
             $('#loading').slideToggle()
             cookieMiddleware()
             $(document).off("scroll")
@@ -138,8 +139,34 @@ Sammy('#main', function() {
         $('#loading').slideToggle()
         $("#main").load("culinary.html", () => {
             $('#loading').slideToggle()
+            $("#minuman-tab").click(() => {
+                $("#minuman").show()
+                $("#makanan").hide()
+            })
+            $("#makanan-tab").click(() => {
+                $("#minuman").hide()
+                $("#makanan").show()
+            })
             scrollMiddleware()
             cookieMiddleware()
+            $("#gudeg-open").click(() =>{
+                $("#gudeg").show()
+            })
+            $("#klatak-open").click(() =>{
+                $("#klatak").show()
+                
+            })
+            $("#krecek-open").click(() =>{
+                $("#krecek").show()
+                
+            })
+            $("#bakpia-open").click(() =>{
+                $("#bakpia").show()
+                
+            })
+            $(".button-close").click(() => {
+                $(".overlay-menu").hide()
+            })
 
         })
     })
