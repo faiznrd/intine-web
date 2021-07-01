@@ -1,159 +1,263 @@
+<div id="header">
+    <div class="h-screen">
 
-    <div class="lg:h-screen h-screen w-full flex overflow-hidden relative overlay">
-        <div class="z-20 absolute z-10 lg:left-14 lg:bottom-14 left-0 bottom-0 p-10 lg:p-0 lg:w-2/5">
-            <h2 class="lg:text-6xl text-4xl pb-5 m-auto font-bold text-white leading-none">
-                <span lang="id">Selamat Datang di Jogja</span>
-                <span lang="en">Welcome To Jogja</span>
-            </h2>
-            <h2 class="lg:text-xl text-base m-auto text-white font-thin">Memayu Hayuning Bawana</h2>
-        </div>
-        <video class="absolute z-0 object-cover top-0 left-0" autoplay muted loop id="myVideo">
-            <source src="assets/video/timelapse.mp4" type="video/mp4">
-          </video>
-    </div>
-    <div class="lg:h-screen h-screen w-full lg:bg-contain bg-cover relative" id="description-jogja">
-        <div class="flex items-center w-full h-3/4">
-            <span class="text-base lg:text-xl p-7 pl-12 w-2/4 align-middle">
-                <span lang="id">Jogja adalah provinsi yang berada di Indonesia tepatnya di Pulau Jawa yang mempunyai warisan budaya yang masih sangat kental hingga sekarang.</span>
-                <span lang="en">Jogja is a province in Indonesia, precisely on the island of Java, which has a very strong cultural heritage to this day.</span>        
-            </span>
-        </div>
-    </div>    
-    <div class="lg:flex lg:justify-end" id="lol-parent">
-        <div class="relative w-full lg:w-1/2 lg:h-screen hidden lg:block" id="lol">
-            <div class="w-full h-full">
-                <div class="relative h-full" id="text-data-wrapper">
-                    <div class="text-data" id="wisata-text">
-                        <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
-                            <h2 class="text-jumbo font-bold">Wisata</h2>
-                        </div> -->            
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
-                            <h2 class="font-bold text-5xl" lang="id">Wisata</h2>
-                            <h2 class="font-bold text-5xl" lang="en">Tourist Attraction</h2>
-                            <h2 class="text-base pb-4 pt-4">
-                                <span lang="id">Yogyakarta terkenal dengan Kota Wisata. Terdapat banyak tempat wisata yang tentu bisa Anda kunjungi. Mulai dari gunung, laut, bangunan sejarah, dan masih banayk lagi</span> 
-                                <span lang="en">Yogyakarta is famous for the City of Tourism. There are many tourist attractions that you can certainly visit. Starting from mountains, seas, historical buildings, and much more</span> 
-                                
-                             </h2>
-                            <a class="text-base" href="#/tourist-attraction"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class="text-data " id="kuliner-text" style="display: none;">
-                        <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
-                            <h2 class="text-jumbo font-bold">Kuliner</h2>
-                        </div> -->                   
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
-                            <h2 class="font-bold text-5xl">
-                                <span lang="id">Kuliner</span> 
-                                <span lang="en">Culinary</span> 
-                            </h2>
-                            <h2 class="text-base pb-4 pt-4">
-                                <span lang="id">Yogyakarta juga banyak memiliki kuliner-kuliner daerah. Beragam kuliner yang dibalut dengan cita rasa yang khas siap memanjakan lidah Anda.</span> 
-                                <span lang="en">Yogyakarta also has many regional cuisines. A variety of culinary delights wrapped with distinctive flavors are ready to pamper your tongue.</span> 
-                            </h2>
-                            <a class="text-base" href="#/culinary"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class="text-data" id="transportasi-umum-text" style="display: none;">
-                        <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
-                            <h2 class="text-jumbo-2 font-bold">Transportasi</h2>
-                        </div> -->                  
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
-                            <h2 class="font-bold text-5xl">                            
-                                <span lang="en">Public Transport</span>
-                                <span lang="id">Transportsi Umum</span></h2>
-                            <h2 class="text-base pb-4 pt-4">
-                                <span lang="id">Pemrintah Kota Yogyakarta menyediakan beberapa transportasi umum yang dapat Anda gunakan ketika sedang mengeksplore Jogja.</span> 
-                                <span lang="en">The Yogyakarta City Government provides several public transportations that you can use when exploring Jogja.</span> 
-                            </h2>
-                            <a class="text-base" href="#/public-transport"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
-                            </svg></a>
-                        </div>
-                    </div>                    
-                    <div class="text-data pb-9 pt-8 pl-6" id="kebudayaan-text" style="display: none;">
-                        <!-- <div class="absolute transform rotate-90 top-1/3 left-custom text-white">
-                            <h2 class="text-jumbo font-bold">Budaya</h2>
-                        </div> -->               
-                        <div class="absolute bottom-10 left-8 pl-7 pb-9 pr-9 text-3xl w-3/4 text-black">
-                            <h2 class="font-bold text-5xl">                            <span lang="en">Culture</span>
-                                <span lang="id">Kebudayaan</span></h2>
-                                <h2 class="text-base pb-4 pt-4">
-                                    <span lang="id">Kota Yogyakarta dikenal juga dengan kebudayaan yang dimiliki. Masyarakat Yogyakarta sangat ulet dalam melestarikan budaya mereka. Tak heran hingga sekarang budaya tradisional masih ada sampai sekarang</span> 
-                                    <span lang="en">The city of Yogyakarta is also known for its culture. The people of Yogyakarta are very tenacious in preserving their culture. It's no wonder that traditional culture still exists today</span> 
-                                </h2>
-                            <a class="text-base" href="#/culture"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span>  <svg class="inline" width="30" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M46.3642 14C47.6185 11.4473 48.7919 9.53276 49.8844 8.25641H0L0 5.74359H49.8844C48.7919 4.46724 47.6185 2.55271 46.3642 0H48.4884C51.0376 2.91168 53.7081 5.06553 56.5 6.46154V7.53846C53.7081 8.89459 51.0376 11.0484 48.4884 14H46.3642Z" fill="black"/>
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>             
-            </div>
-        </div>
-        <div class="relative w-full lg:w-1/2 h-full">
-            <div class="relative lg:h-screen h-screen overflow-hidden" id="wisata-banner">
-                <div class="w-full h-full absolute">
-                    <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
-                        <h2 class="font-bold text-base">
-                            <span lang="en">Tourist Attraction</span>
-                            <span lang="id">Wisata</span>
-                        </h2>
-                        <h2 class="text-base pb-3 pt-3">
-                            <span lang="id">Yogyakarta terkenal dengan Kota Wisata. Terdapat banyak tempat wisata yang tentu bisa Anda kunjungi. Mulai dari gunung, laut, bangunan sejarah, dan masih banayk lagi</span> 
-                            <span lang="en">Yogyakarta is famous for the City of Tourism. There are many tourist attractions that you can certainly visit. Starting from mountains, seas, historical buildings, and much more</span> 
-                        </h2>
-                        <a class="font-bold text-base" href="#/tourist-attraction"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
-                    </div>
-                    <img class="w-full h-full object-cover"  src="assets/img/prambanan.jpg" alt="" srcset="">
-                    
-                </div>
-            </div>    
-            <div class="relative lg:h-screen h-screen overflow-hidden" id="kuliner-banner">
-                <div class="w-full h-full absolute">
-                    <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
-                        <h2 class="font-bold text-base">
-                            <span lang="en">Culinary</span>
-                            <span lang="id">Kuliner</span>
-                        </h2>
-                        <h2 class="text-base pb-3 pt-3">
-                            <span lang="id">Yogyakarta juga banyak memiliki kuliner-kuliner daerah. Beragam kuliner yang dibalut dengan cita rasa yang khas siap memanjakan lidah Anda.</span> 
-                            <span lang="en">Yogyakarta also has many regional cuisines. A variety of culinary delights wrapped with distinctive flavors are ready to pamper your tongue.</span> 
-                        </h2>
-                        <a class="font-bold text-base" href="#/culinary"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
-                    </div>
-                    <img class="w-full h-full object-cover" src="assets/img/gudeg.jpg" alt="" srcset="">
+        <div class="z-30 h-full flex items-center p-32 pt-0 pb-0 pr-0 text-white w-3/4">
+            <div class="z-30 grid grid-cols-1 gap-10 h-auto">
+                <h1 class="text-6xl font-bold leading-tight">Mari Jelajahi dan Ciptakan Pengalaman tak Terlupakan</h1>
+                <p class="text-xl font-light" >Kota Yogyakarta dikenal juga dengan kebudayaan yang dimiliki. Masyarakat Yogyakarta sangat ulet dalam melestarikan budaya mereka. Tak heran hingga sekarang budaya tradisional masih ada sampai sekarang maka akan menjadi indah.</p>
+                <div>
+                    <a href="#/explore/jogja" class="border-2 bg-red-600 border-red-600 p-3 pr-5 pl-5 rounded-full inline-block bg-gradient-linear-red button-hover-red-shadow">Jelajahi Sekarang</a>
+                    <a href="#/kontak" class="border-2 border-red-600 p-3 pr-5 pl-5 rounded-full inline-block button-hover-bg-red">Kontak Kami</a>
                 </div>
             </div>
-            <div class="relative lg:h-screen h-screen overflow-hidden" id="transportasi-umum-banner">
-                <div class="w-full h-full absolute">
-                    <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
-                        <h2 class="font-bold text-base">                            <span lang="en">Public Transport</span>
-                            <span lang="id">Transportsi Umum</span></h2>
-                        <h2 class="text-base pb-3 pt-3">
-                            <span lang="id">Pemrintah Kota Yogyakarta menyediakan beberapa transportasi umum yang dapat Anda gunakan ketika sedang mengeksplore Jogja.</span> 
-                            <span lang="en">The Yogyakarta City Government provides several public transportations that you can use when exploring Jogja.</span> 
-                    </h2>
-                        <a class="font-bold text-base" href="#/public-transport"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
-                    </div>                    
-                    <img class="w-full h-full object-cover"  src="assets/img/sepur.jpg" alt="" srcset="">
+        </div>
+        <div class="z-30 h-10 w-full bottom-0 absolute bg-white rounded-tr-full rounded-tl-full"></div>
+        <div class="z-0 absolute top-0 left-0 h-screen w-full">
+            <div class="carousel relative rounded relative overflow-hidden ">
+                <div class="carousel-inner relative overflow-hidden w-full">
+                  <!--Slide 1-->
+                  <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                    checked="checked">
+                  <div class="carousel-item absolute opacity-0 bg-center h-screen bg-cover" style="background-image: url(assets/img/tugu.png)">
+                  
+                  </div>
+
+                      <label for="carousel-3"
+                        class="control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden rounded-full font-bold text-black hover:text-white bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-28 flex justify-center content-center"><i
+                          class="fas fa-angle-left mt-3"></i></label>
+                      <label for="carousel-2"
+                        class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer rounded-full hidden font-bold text-black hover:text-white bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-5"><i
+                          class="fas fa-angle-right mt-3"></i></label>
+              
+                  <!--Slide 2-->
+                  <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                  <div class="carousel-item absolute opacity-0 bg-center h-screen bg-cover" style="background-image: url(assets/img/carousel1.png)">
+                  </div>
+                  <label for="carousel-1"
+                    class=" control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-28"><i
+                      class="fas fa-angle-left mt-3"></i></label>
+                  <label for="carousel-3"
+                    class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-5"><i
+                      class="fas fa-angle-right mt-3"></i></label>
+              
+                  <!--Slide 3-->
+                  <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                  <div class="carousel-item absolute opacity-0 h-screen bg-cover" style="background-image: url(assets/img/carousel2.png)">
+                  </div>
+                  <label for="carousel-2"
+                    class="control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-28"><i
+                      class="fas fa-angle-left mt-3"></i></label>
+                  <label for="carousel-4"
+                    class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-5"><i
+                      class="fas fa-angle-right mt-3"></i></label>
+                      <!--Slide 4-->
+                  <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
+                  <div class="carousel-item absolute opacity-0 h-screen bg-cover" style="background-image: url(assets/img/carousel3.png)">
+                  </div>
+                  <label for="carousel-3"
+                    class="control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-28"><i
+                      class="fas fa-angle-left mt-3"></i></label>
+                  <label for="carousel-5"
+                    class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-5"><i
+                      class="fas fa-angle-right mt-3"></i></label>
+                      <!--Slide 5-->
+                  <input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden="">
+                  <div class="carousel-item absolute opacity-0 h-screen bg-cover" style="background-image: url(assets/img/carousel4.png)">
+                  </div>
+                  <label for="carousel-4"
+                    class="control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-28"><i
+                      class="fas fa-angle-left mt-3"></i></label>
+                  <label for="carousel-1"
+                    class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 bottom-24 right-5"><i
+                      class="fas fa-angle-right mt-3"></i></label>
+              
+                  <!-- Add additional indicators for each slide-->
+                  <ol class="carousel-indicators">
+                    <li class="inline-block mr-3">
+                      <label for="carousel-1"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                      <label for="carousel-2"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                      <label for="carousel-3"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                  </ol>
+              
                 </div>
-            </div>              
-            <div class="relative lg:h-screen h-screen overflow-hidden" id="kebudayaan-banner">
-                <div class="w-full h-full absolute">
-                    <div class="absolute bottom-5 left-5 text-white block lg:hidden pr-5">
-                        <h2 class="font-bold text-base">                            <span lang="en">Culture</span>
-                            <span lang="id">Kebudayaan</span></h2>
-                        <h2 class="text-base pb-3 pt-3">                                    
-                            <span lang="id">Kota Yogyakarta dikenal juga dengan kebudayaan yang dimiliki. Masyarakat Yogyakarta sangat ulet dalam melestarikan budaya mereka. Tak heran hingga sekarang budaya tradisional masih ada sampai sekarang</span> 
-                            <span lang="en">The city of Yogyakarta is also known for its culture. The people of Yogyakarta are very tenacious in preserving their culture. It's no wonder that traditional culture still exists today</span> </h2>
-                        <a class="font-bold text-base" href="#/culture"><span lang="id">Baca Selengkapnya</span><span lang="en">Read more</span> </a>
-                    </div>
-                    <img class="w-full h-full object-cover"  src="assets/img/wayang.png" alt="" srcset="">
-                </div>
-            </div> 
+            </div>
         </div>
     </div>
+</div>
+<div id="content" class="h-auto bg-white overflow-x-hidden">
+    <div class="h-screen flex items-center justify-center relative text-black-1a">
+        <div class="z-30 w-3/4">
+            <div class="grid grid-cols-2 gap-2">
+                <div class="flex items-center justify-center">
+                    <img src="assets/svg/diy.svg" alt="">
+                </div>
+                <div class="items-center justify-center">
+                    <div class="grid grid-cols-1 gap-4">
+                        <h2 class="text-2xl font-light border-l-8 pl-3 border-orange">Sekilas Tentang</h2>
+                        <h1 class="text-4xl font-bold">Daerah Istimewa Yogyakarta</h1>
+                        <p class="text-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, facilisis vitae lectus euismod ullamcorper morbi eu et. Vitae in vel ullamcorper sed erat. Dui cursus in dolor tortor, in lorem. Interdum consequat felis, tortor euismod vulputate. Libero, suscipit phasellus dui vitae. Ipsum, elit, nam gravida neque nisl tempor. A lacus, et turpis quam tempor. Viverra malesuada commodo magnis nibh sed quis nisl.</p>
+                        <a class="text-xl text-red-600" href="">Baca Selengkapnya <img class="inline-block" src="assets/svg/left-arrow-2.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/img/lampu.png" class="opacity-5 z-10 absolute top-0 -right-96" alt="">
+        <img src="assets/img/merapi.png" class="opacity-5 z-10 absolute bottom-0 -left-80" alt="">
+    </div>
+    <div class="h-screen flex justify-center items-center">
+        <div class="grid grid-cols-1 gap-4 w-3/4 h-3/4">
+            <div>
+                <h1 class="text-4xl pl-3 border-l-8 border-orange font-bold">Saksikan Video Berikut</h1>
+            </div>
+            <div class="flex justify-center items-center relative">
+                <div class="absolute bg-red-jogja rounded-2xl font-bold p-3 pl-9 pr-9 text-white text-3xl border-orange border-r-8 top-0 right-0">Keindahan</div>
+                <div class="absolute bg-red-jogja rounded-2xl font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-20 right-48">Ciri Khas</div>
+                <div class="absolute bg-red-jogja rounded-2xl font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-24 right-9">Keunikan</div>
+                <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer open-modal" data-modal-id="video-home">
+                    <img src="assets/svg/icon-player.svg" alt="">
+                </div>
+                <img src="assets/img/tugu.png" class="rounded-3xl" width="70%" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="h-screen flex justify-center items-center">
+        <div class="grid grid-cols-2 gap-4 w-3/4 h-3/4 relative">
+            <div class="z-10 grid grid-cols-1 gap-4">
+                <h1 class="text-6xl font-bold leading-tight">Apa yang Anda Cari ?</h1>
+                <p class="text-xl font-light">Lorem ipsum dolor sit amet, consectetur abdika adipiscing elit. A, facilisis vitae lectus euismod ullamcorper morbi eu et. Vitae in vel ullamcorper sed erat. Dui cursus in dolor tortor, in lorem. Interdum consequat felis</p>
+            </div>
+            <div>
+                <div class="grid grid-cols-4 gap-4 h-full">
+                    <div class="flex justify-center items-center">
+                        <div class="inline-block button-hover-bg-red border-red-600 border-2 rounded-full w-10 h-10 flex justify-center items-center button-slide" id="prev-slide">
+                            <img src="assets/svg/carousel-arrow-left.svg" alt="" width="10px" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex justify-center items-center" id="card-slider">
+                        <div class="shadow-red rounded-2xl w-full h-96 overflow-hidden relative card-item">
+                            <div class="absolute bottom-0 w-full text-center pb-16 bg-gradient-linear-to-top">
+                                <h1 class="text-xl font-bold tracking-widest text-white">TENTANG JOGJA</h1>
+                                <hr class="w-1/4 border-red border-2 m-auto mt-2 mb-2" />
+                                <p class="text-base text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat quisque malesuada erat egestaset</p>
+                            </div>
+                            <a href="#/explore/jogja">
+                            <div class="absolute bottom-0 right-0 rounded-tl-3xl flex overflow-hidden h-10">
+                                <div class="text-base text-white h-full w-52 flex justify-center items-center bg-gradient-linear-slider">Selengkapnya</div>
+                                <div class="bg-red-jogja h-full w-10 flex justify-center items-center"><img class="toWhite" src="assets/svg/carousel-arrow-right.svg" alt=""></div>
+                            </div>
+                            </a>
+                            <img class="h-full max-w-none w-auto" src="assets/img/bank.png" alt="" srcset="">
+                        </div>
+                        <div class="shadow-red rounded-2xl w-full h-96 overflow-hidden relative card-item hidden">
+                            <div class="absolute bottom-0 w-full text-center pb-16 bg-gradient-linear-to-top">
+                                <h1 class="text-xl font-bold tracking-widest text-white">WISATA</h1>
+                                <hr class="w-1/4 border-red border-2 m-auto mt-2 mb-2" />
+                                <p class="text-base text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat quisque malesuada erat egestaset</p>
+                            </div>
+                            <a href="#/explore/wisata">
+                            <div class="absolute bottom-0 right-0 rounded-tl-3xl flex overflow-hidden h-10">
+                                <div class="text-base text-white h-full w-52 flex justify-center items-center bg-gradient-linear-slider">Selengkapnya</div>
+                                <div class="bg-red-jogja h-full w-10 flex justify-center items-center"><img class="toWhite" src="assets/svg/carousel-arrow-right.svg" alt=""></div>
+                            </div>
+                            </a>
+                            <img class="h-full max-w-none w-auto" src="assets/img/candi.png" alt="" srcset="">
+                        </div>
+                        <div class="shadow-red rounded-2xl w-full h-96 overflow-hidden relative card-item hidden">
+                            <div class="absolute bottom-0 w-full text-center pb-16 bg-gradient-linear-to-top">
+                                <h1 class="text-xl font-bold tracking-widest text-white">KULINER</h1>
+                                <hr class="w-1/4 border-red border-2 m-auto mt-2 mb-2" />
+                                <p class="text-base text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat quisque malesuada erat egestaset</p>
+                            </div>
+                            <a href="#/explore/kuliner">
+                            <div class="absolute bottom-0 right-0 rounded-tl-3xl flex overflow-hidden h-10">
+                                <div class="text-base text-white h-full w-52 flex justify-center items-center bg-gradient-linear-slider">Selengkapnya</div>
+                                <div class="bg-red-jogja h-full w-10 flex justify-center items-center"><img class="toWhite" src="assets/svg/carousel-arrow-right.svg" alt=""></div>
+                            </div>
+                            </a>
+                            <img class="h-full max-w-none w-auto" src="assets/img/gudeg.png" alt="" srcset="">
+                        </div>
+                        <div class="shadow-red rounded-2xl w-full h-96 overflow-hidden relative card-item hidden">
+                            <div class="absolute bottom-0 w-full text-center pb-16 bg-gradient-linear-to-top">
+                                <h1 class="text-xl font-bold tracking-widest text-white">KEBUDAYAAN</h1>
+                                <hr class="w-1/4 border-red border-2 m-auto mt-2 mb-2" />
+                                <p class="text-base text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat quisque malesuada erat egestaset</p>
+                            </div>
+                            <a href="#/explore/budaya">
+                            <div class="absolute bottom-0 right-0 rounded-tl-3xl flex overflow-hidden h-10">
+                                <div class="text-base text-white h-full w-52 flex justify-center items-center bg-gradient-linear-slider">Selengkapnya</div>
+                                <div class="bg-red-jogja h-full w-10 flex justify-center items-center"><img class="toWhite" src="assets/svg/carousel-arrow-right.svg" alt=""></div>
+                            </div>
+                            </a>
+                            <img class="h-full max-w-none w-auto" src="assets/img/budaya.png" alt="" srcset="">
+                        </div>
+                        <div class="shadow-red rounded-2xl w-full h-96 overflow-hidden relative card-item hidden">
+                            <div class="absolute bottom-0 w-full text-center pb-16 bg-gradient-linear-to-top">
+                                <h1 class="text-xl font-bold tracking-widest text-white">TRANSPORTASI</h1>
+                                <hr class="w-1/4 border-red border-2 m-auto mt-2 mb-2" />
+                                <p class="text-base text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat quisque malesuada erat egestaset</p>
+                            </div>
+                            <a href="#/explore/transportasi">
+                                <div class="absolute bottom-0 right-0 rounded-tl-3xl flex overflow-hidden h-10">
+                                    <div class="text-base text-white h-full w-52 flex justify-center items-center bg-gradient-linear-slider">Selengkapnya</div>
+                                    <div class="bg-red-jogja h-full w-10 flex justify-center items-center"><img class="toWhite" src="assets/svg/carousel-arrow-right.svg" alt=""></div>
+                                </div>
+                            </a>
+                                <img class="h-full max-w-none w-auto" src="assets/img/becak.png" alt="" srcset="">
+                        </div>
+                        <div class="shadow-red rounded-2xl w-full h-96 overflow-hidden relative card-item hidden">
+                            <div class="absolute bottom-0 w-full text-center pb-16 bg-gradient-linear-to-top">
+                                <h1 class="text-xl font-bold tracking-widest text-white">SOUVENIR</h1>
+                                <hr class="w-1/4 border-red border-2 m-auto mt-2 mb-2" />
+                                <p class="text-base text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat quisque malesuada erat egestaset</p>
+                            </div>
+                            <a href="#/explore/souviner">
+                                <div class="absolute bottom-0 right-0 rounded-tl-3xl flex overflow-hidden h-10">
+                                    <div class="text-base text-white h-full w-52 flex justify-center items-center bg-gradient-linear-slider">Selengkapnya</div>
+                                    <div class="bg-red-jogja h-full w-10 flex justify-center items-center"><img class="toWhite" src="assets/svg/carousel-arrow-right.svg" alt=""></div>
+                                </div>
+                            </a>
+                            <img class="h-full max-w-none w-auto" src="assets/img/nongkrong.png" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="inline-block button-hover-bg-red border-red-600 border-2 rounded-full w-10 h-10 flex justify-center items-center button-slide" id="next-slide">
+                            <img src="assets/svg/carousel-arrow-right.svg" alt="" width="10px" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-span-4 grid grid-cols-1">
+                        <div class="flex justify-center items-center">
+                            <div class="text-xl font-bold" id="text-progress">01/06</div>
+                        </div>
+                        <div class="flex justify-center items-center" id="slider-progress">
+                            <hr class="w-8 progress border-2 border-orange">
+                            <hr class="w-8 progress border-orange">
+                            <hr class="w-8 progress border-orange">
+                            <hr class="w-8 progress border-orange">
+                            <hr class="w-8 progress border-orange">
+                            <hr class="w-8 progress border-orange">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="z-0 absolute -top-32" src="assets/svg/dots.svg" alt="">
+        </div>
+    </div>
+</div>
+<div class="bg-red-jogja p-24 flex justify-center items-center text-center overflow-hidden relative text-white">
+    <div class="z-10 w-3/4">
+        <div class="z-10 text-4xl leading-wider">Tunggu apa lagi, nikmati keindahan, keunikan, serta ciri khas Kota Jogjakarta dan buat cerita yang berkesan</div>
+        <div class="pt-5">
+            <a href="#/explore/jogja" class="p-3 pr-5 pl-5 rounded-full inline-block bg-gradient-linear-gold button-hover-gold-shadow">Jelajahi Sekarang</a>
+        </div>
+    </div>
+    <img class="z-0 w-1/4 absolute bottom-0 left-0 " src="assets/svg/jogja-items.svg" alt="" srcset="">
+    <img class="z-0 w-1/2 absolute -right-60 opacity-5" src="assets/img/tugu_vektor.png" alt="">
+</div>
