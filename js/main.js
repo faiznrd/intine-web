@@ -92,32 +92,31 @@ var app = Sammy('#main', function() {
             })
             $(".button-close").click(() => {$(".modal").hide()})
             $("#berita-top").append(                    
-                '<div class="grid grid-cols-2 gap-4">'+
-            '<div class="h-full w-full rounded-3xl black-shadow overflow-hidden">'+
+                '<div class="flex">'+
+            '<div class="w-2/5 h-full w-full rounded-3xl black-shadow overflow-hidden">'+
                 '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="assets/img/wisata/kota/malioboro.png"></div>'+
                 '<div class="thumbnail p-9 bg-white">'+
                 '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">20 Juni 2009</div>'+
                 '<div class="text-base font-bold pb-6">Pengunjung Malioboro Diwajibkan Mematuhi Protokol Kesehatan Guna Menekan Angka Persebaran COVID-19</div>'+
-                '<div class="text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh eu id sit sit sed mi. Pellentesque sit nulla fames volutpat eu, mi. Lobortis lorem cursus odio volutpat non pellentesque risus. Et egestas elit vitae orci commodo mollis adipiscing nisl arcu. Eu cras vulputate facilisis pretium eu fermentum in vel. Pellentesque ante cras risus, dapibus ultricies cum suscipit.</div>'+
                 '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
             '</div>'+
            '</div>'+
-           '<div class="grid grid-cols-1 gap-4">'+
-           '<div class="h-full w-full rounded-3xl black-shadow overflow-hidden">'+
-               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="w-full" src="assets/img/andhong.png"></div>'+
-               '<div class="thumbnail h-auto p-9 bg-white"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">13 Juni 1999</div>'+
+           '<div class="w-3/5 flex flex-col pl-5">'+
+           '<div class="pb-5"><div class="h-72 w-full flex rounded-3xl black-shadow overflow-hidden">'+
+               '<div class="thumbnail w-2/5 bg-gray-900 overflow-hidden"><img class="h-full max-w-none" src="assets/img/andhong.png"></div>'+
+               '<div class="thumbnail h-auto w-3/5 p-9 bg-white"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">13 Juni 1999</div>'+
                    '<div class="text-base font-bold">Delman atau yang Lebih Dikenal dengan Nama Andhong Menjadi Daya Tarik Tersendiri Bagi Para Wisatawan yang Mengunjungi Malioboro</div>'+
                    '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
                '</div>'+
-           '</div>'+
-           '<div class="h-full w-full rounded-3xl black-shadow overflow-hidden">'+
-               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="w-full" src="assets/img/bakpia.png"></div>'+
-               '<div class="thumbnail h-auto p-9 bg-white">'+
+           '</div></div>'+
+           '<div class=""><div class="h-72 w-full rounded-3xl flex black-shadow overflow-hidden">'+
+               '<div class="thumbnail w-2/5 bg-gray-900 overflow-hidden"><img class="h-full max-w-none" src="assets/img/bakpia.png"></div>'+
+               '<div class="thumbnail h-auto w-3/5 p-9 bg-white">'+
                    '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">19 Augstus 1969</div>'+
                    '<div class="text-base font-bold">Bakpia Pathok dengan Cita Rasa yang Khas Menjadi Pilihan Wisatawan Sebagai Oleh-Oleh yang Wajib Dibeli Ketika Berlibur ke Jogja</div>'+
                    '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
                '</div>'+
-           '</div>'+
+           '</div></div>'+
         '</div>'+
            '</div>')
 
