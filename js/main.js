@@ -73,6 +73,52 @@ $(".open-modal").click(function(){
 })
 $(".button-close").click(() => {$(".modal").hide()})
 var app = Sammy('#main', function() {
+    this.get("/", function(){
+        $("#main").load("home.html", () => {
+            activeMenu("#beranda")
+            slider()
+            $(".open-modal").click(function(){
+                console.log(1)
+                var modal_id = $(this).data("modal-id")
+                $("#"+modal_id).show()
+            })
+            $(".button-close").click(() => {$(".modal").hide()})
+            $.ajax({
+                url:"https://gnews.io/api/v4/search?q=yogyakarta&token=e985cc7144bc55b1551dbc46c1fb0ce2&lang=en"
+            }).then((data) =>{
+                console.log(data)
+                $("#berita-top").append(                    
+                '<div class="grid grid-cols-2 gap-4">'+
+            '<div class="h-full w-full rounded-3xl">'+
+                '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="'+data.articles[2]["image"]+'"></div>'+
+                '<div class="thumbnail p-9 bg-white black-shadow">'+
+                '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[2]["publishedAt"]+'</div>'+
+                '<div class="text-base font-bold pb-6">'+data.articles[2]["title"]+'</div>'+
+                '<div class="text-sm font-light">'+data.articles[2]["description"]+'</div>'+
+                '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[2]["url"]+'">Baca Selengkapnya</a></div>'+
+            '</div>'+
+           '</div>'+
+           '<div class="grid grid-cols-1 gap-4">'+
+           '<div class="h-full w-full rounded-3xl">'+
+               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[3]["image"]+'"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[3]["publishedAt"]+'</div>'+
+                   '<div class="text-base font-bold">'+data.articles[3]["title"]+'</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[3]["url"]+'">Baca Selengkapnya</a></div>'+
+               '</div>'+
+           '</div>'+
+           '<div class="h-full w-full rounded-3xl">'+
+               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[1]["image"]+'"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
+                   '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[1]["publishedAt"]+'</div>'+
+                   '<div class="text-base font-bold">'+data.articles[1]["title"]+'</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[1]["url"]+'">Baca Selengkapnya</a></div>'+
+               '</div>'+
+           '</div>'+
+        '</div>'+
+           '</div>')
+            })
+        })
+    })
     this.get('#/', function() {
         $("#main").load("home.html", () => {
             activeMenu("#beranda")
@@ -83,6 +129,40 @@ var app = Sammy('#main', function() {
                 $("#"+modal_id).show()
             })
             $(".button-close").click(() => {$(".modal").hide()})
+            $.ajax({
+                url:"https://gnews.io/api/v4/search?q=yogyakarta&token=e985cc7144bc55b1551dbc46c1fb0ce2&lang=en"
+            }).then((data) =>{
+                console.log(data)
+                $("#berita-top").append(                    
+                '<div class="grid grid-cols-2 gap-4">'+
+            '<div class="h-full w-full rounded-3xl">'+
+                '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="'+data.articles[2]["image"]+'"></div>'+
+                '<div class="thumbnail p-9 bg-white black-shadow">'+
+                '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[2]["publishedAt"]+'</div>'+
+                '<div class="text-base font-bold pb-6">'+data.articles[2]["title"]+'</div>'+
+                '<div class="text-sm font-light">'+data.articles[2]["description"]+'</div>'+
+                '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[2]["url"]+'">Baca Selengkapnya</a></div>'+
+            '</div>'+
+           '</div>'+
+           '<div class="grid grid-cols-1 gap-4">'+
+           '<div class="h-full w-full rounded-3xl">'+
+               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[3]["image"]+'"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[3]["publishedAt"]+'</div>'+
+                   '<div class="text-base font-bold">'+data.articles[3]["title"]+'</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[3]["url"]+'">Baca Selengkapnya</a></div>'+
+               '</div>'+
+           '</div>'+
+           '<div class="h-full w-full rounded-3xl">'+
+               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[1]["image"]+'"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
+                   '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[1]["publishedAt"]+'</div>'+
+                   '<div class="text-base font-bold">'+data.articles[1]["title"]+'</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[1]["url"]+'">Baca Selengkapnya</a></div>'+
+               '</div>'+
+           '</div>'+
+   '</div>'+
+           '</div>')
+            })
         })
     });
     this.get('#/explore/jogja', function() {
@@ -194,32 +274,63 @@ var app = Sammy('#main', function() {
             dropDownFunc()
             activeMenu("#berita")
             $.ajax({
-                url:"https://newsapi.org/v2/everything?q=wisata yogyakarta&apiKey=db5b92ead6dc49d39aa35c949e8c1262"
+                url:"https://gnews.io/api/v4/search?q=yogyakarta&token=e985cc7144bc55b1551dbc46c1fb0ce2&lang=en"
             }).then((data) =>{
                 console.log(data)
-                $("#berita-top").append('<div class="grid grid-cols-1 gap-4 w-1/3">'+
-                '<div class="h-full w-full">'+
-                '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[0]["urlToImage"]+'"></div>'+
-                    '<div class="thumbnail h-auto p-9 bg-white black-shadow"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[0]["publishedAt"]+'</div>'+
-                        '<div class="text-base font-bold">'+data.articles[0]["title"]+'</div>'+
+                $("#berita-top").append(
+                    '<div class="grid grid-cols-2 gap-4"><div class="grid grid-cols-1 gap-4">'+
+                '<div class="h-full w-full rounded-3xl">'+
+                '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[3]["image"]+'"></div>'+
+                    '<div class="thumbnail h-auto p-9 bg-white black-shadow"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[3]["publishedAt"]+'</div>'+
+                        '<div class="text-base font-bold">'+data.articles[3]["title"]+'</div>'+
+                        '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[3]["url"]+'">Baca Selengkapnya</a></div>'+
                     '</div>'+
                 '</div>'+
-                '<div class="h-full w-full">'+
-                '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[1]["urlToImage"]+'"></div>'+
+                '<div class="h-full w-full rounded-3xl">'+
+                '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[1]["image"]+'"></div>'+
                     '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
                         '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[1]["publishedAt"]+'</div>'+
                         '<div class="text-base font-bold">'+data.articles[1]["title"]+'</div>'+
+                        '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[1]["url"]+'">Baca Selengkapnya</a></div>'+
                     '</div>'+
                 '</div>'+
             '</div>'+
-            '<div class="h-full w-full w-2/3 pl-7">'+
-                '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="'+data.articles[2]["urlToImage"]+'"></div>'+
-                '<div class="thumbnail h-full p-9 bg-white black-shadow">'+
+            '<div class="h-full w-full rounded-3xl">'+
+                '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="'+data.articles[2]["image"]+'"></div>'+
+                '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
                 '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[2]["publishedAt"]+'</div>'+
                 '<div class="text-base font-bold pb-6">'+data.articles[2]["title"]+'</div>'+
                 '<div class="text-sm font-light">'+data.articles[2]["description"]+'</div>'+
+                '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[2]["url"]+'">Baca Selengkapnya</a></div>'+
             '</div>'+
-           '</div>')
+           '</div></div>'+
+           '<div class="grid grid-cols-3 gap-4 pt-5">'+
+           '<div class="h-full w-full rounded-3xl">'+
+           '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[4]["image"]+'"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
+                   '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[4]["publishedAt"]+'</div>'+
+                   '<div class="text-base font-bold">'+data.articles[4]["title"]+'</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[4]["url"]+'">Baca Selengkapnya</a></div>'+
+               '</div>'+
+           '</div>'+
+           '<div class="h-full w-full rounded-3xl">'+
+           '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[5]["image"]+'"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
+                   '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[5]["publishedAt"]+'</div>'+
+                   '<div class="text-base font-bold">'+data.articles[5]["title"]+'</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[5]["url"]+'">Baca Selengkapnya</a></div>'+
+               '</div>'+
+           '</div>'+
+           '<div class="h-full w-full rounded-3xl">'+
+           '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[6]["image"]+'"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
+                   '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[6]["publishedAt"]+'</div>'+
+                   '<div class="text-base font-bold">'+data.articles[6]["title"]+'</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[6]["url"]+'">Baca Selengkapnya</a></div>'+
+               '</div>'+
+           '</div>'+
+           +'</div>'
+           )
             })
         });
     });
