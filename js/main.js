@@ -116,7 +116,6 @@ $(".button-close").click(() => {$(".modal").hide()})
 var app = Sammy('#main', function() {
     this.get("/", function(){
         $("#main").load("home.html", () => {
-            beritaMiddleware()
             AOS.init();
             slider()
             $(".open-modal").click(function(){

@@ -131,6 +131,9 @@ html {
   border-top: 1px solid rgb(194, 194, 194);
   font-weight: 400;
 }
+select{
+  outline: none;
+}
 .menu-bahasa:hover{
   background-color: #F78978;
   font-weight: bold;
