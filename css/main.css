@@ -139,3 +139,18 @@
 .z-60{
   z-index: 999 !important;
 }
+.menu-item a{
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.menu-item a::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #F4D92E;
+  transition: width .3s;
+}
+.menu-item a:hover::after{
+  width: 100%;
+}

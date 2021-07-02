@@ -78,7 +78,6 @@ var app = Sammy('#main', function() {
     this.get("/", function(){
         $("#main").load("home.html", () => {
             AOS.init();
-            activeMenu("#beranda")
             slider()
             $(".open-modal").click(function(){
                 console.log(1)
@@ -86,46 +85,41 @@ var app = Sammy('#main', function() {
                 $("#"+modal_id).show()
             })
             $(".button-close").click(() => {$(".modal").hide()})
-            $.ajax({
-                url:"https://gnews.io/api/v4/search?q=yogyakarta&token=e985cc7144bc55b1551dbc46c1fb0ce2&lang=en"
-            }).then((data) =>{
-                console.log(data)
-                $("#berita-top").append(                    
+            $("#berita-top").append(                    
                 '<div class="grid grid-cols-2 gap-4">'+
             '<div class="h-full w-full rounded-3xl">'+
-                '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="'+data.articles[2]["image"]+'"></div>'+
+                '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="assets/img/wisata/kota/malioboro.png"></div>'+
                 '<div class="thumbnail p-9 bg-white black-shadow">'+
-                '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[2]["publishedAt"]+'</div>'+
-                '<div class="text-base font-bold pb-6">'+data.articles[2]["title"]+'</div>'+
-                '<div class="text-sm font-light">'+data.articles[2]["description"]+'</div>'+
-                '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[2]["url"]+'">Baca Selengkapnya</a></div>'+
+                '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">20 Juni 2009</div>'+
+                '<div class="text-base font-bold pb-6">Pengunjung Malioboro Diwajibkan Mematuhi Protokol Kesehatan Guna Menekan Angka Persebaran COVID-19</div>'+
+                '<div class="text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh eu id sit sit sed mi. Pellentesque sit nulla fames volutpat eu, mi. Lobortis lorem cursus odio volutpat non pellentesque risus. Et egestas elit vitae orci commodo mollis adipiscing nisl arcu. Eu cras vulputate facilisis pretium eu fermentum in vel. Pellentesque ante cras risus, dapibus ultricies cum suscipit.</div>'+
+                '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
             '</div>'+
            '</div>'+
            '<div class="grid grid-cols-1 gap-4">'+
            '<div class="h-full w-full rounded-3xl">'+
-               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[3]["image"]+'"></div>'+
-               '<div class="thumbnail h-auto p-9 bg-white black-shadow"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[3]["publishedAt"]+'</div>'+
-                   '<div class="text-base font-bold">'+data.articles[3]["title"]+'</div>'+
-                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[3]["url"]+'">Baca Selengkapnya</a></div>'+
+               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="w-full" src="assets/img/andhong.png"></div>'+
+               '<div class="thumbnail h-auto p-9 bg-white black-shadow"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">13 Juni 1999</div>'+
+                   '<div class="text-base font-bold">Delman atau yang Lebih Dikenal dengan Nama Andhong Menjadi Daya Tarik Tersendiri Bagi Para Wisatawan yang Mengunjungi Malioboro</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
                '</div>'+
            '</div>'+
            '<div class="h-full w-full rounded-3xl">'+
-               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="h-full" src="'+data.articles[1]["image"]+'"></div>'+
+               '<div class="thumbnail h-60 bg-gray-900 overflow-hidden"><img class="w-full" src="assets/img/bakpia.png"></div>'+
                '<div class="thumbnail h-auto p-9 bg-white black-shadow">'+
-                   '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">'+data.articles[1]["publishedAt"]+'</div>'+
-                   '<div class="text-base font-bold">'+data.articles[1]["title"]+'</div>'+
-                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="'+data.articles[1]["url"]+'">Baca Selengkapnya</a></div>'+
+                   '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">19 Augstus 1969</div>'+
+                   '<div class="text-base font-bold">Bakpia Pathok dengan Cita Rasa yang Khas Menjadi Pilihan Wisatawan Sebagai Oleh-Oleh yang Wajib Dibeli Ketika Berlibur ke Jogja</div>'+
+                   '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
                '</div>'+
            '</div>'+
         '</div>'+
            '</div>')
-            })
+
         })
     })
     this.get('#/', function() {
         $("#main").load("home.html", () => {
             AOS.init();
-            activeMenu("#beranda")
             slider()
             $(".open-modal").click(function(){
                 console.log(1)
@@ -172,7 +166,6 @@ var app = Sammy('#main', function() {
     this.get('#/explore/jogja', function() {
         $("#main").load("explore.html", () => {
             $("#dropdown-navigator option[value=1]").attr('selected','selected');
-            activeMenu("#jelajahi")
             dropDownFunc()
             $("#main-explore").load("sekilas.html")
         });
@@ -180,7 +173,6 @@ var app = Sammy('#main', function() {
     this.get('#/explore/wisata', function() {
         $("#main").load("explore.html", () => {
             $(".modal").hide()
-            activeMenu("#jelajahi")
             dropDownFunc()
             $("#dropdown-navigator option[value=3]").attr('selected','selected');
             $("#main-explore").load("wisata.html", () => {
@@ -209,7 +201,6 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             dropDownFunc()
-            activeMenu("#jelajahi")
             $("#dropdown-navigator option[value=2]").attr('selected','selected');
             $("#main-explore").load("kuliner.html", () => {
                 $(".open-modal").click(function(){
@@ -237,7 +228,6 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             dropDownFunc()
-            activeMenu("#jelajahi")
             $("#dropdown-navigator option[value=4]").attr('selected','selected');
             $("#main-explore").load("budaya.html", () =>{
 
@@ -254,7 +244,6 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             dropDownFunc()
-            activeMenu("#jelajahi")
             $("#dropdown-navigator option[value=5]").attr('selected','selected');
             $("#main-explore").load("transportasi.html")
         });
@@ -264,19 +253,16 @@ var app = Sammy('#main', function() {
             $(".modal").hide()
             $("#dropdown-navigator option[value=6]").attr('selected','selected');
             dropDownFunc()
-            activeMenu("#jelajahi")
             $("#main-explore").load("souvenir.html")
         });
     });
     this.get('#/kontak', function() {
-        activeMenu("#kontak-kami")
         $("#main").load("kontak.html");
     });
     this.get('#/berita', function() {
         $("#main").load("berita.html", () => {
             $(".modal").hide()
             dropDownFunc()
-            activeMenu("#berita")
             $.ajax({
                 url:"https://gnews.io/api/v4/search?q=yogyakarta&token=e985cc7144bc55b1551dbc46c1fb0ce2&lang=en"
             }).then((data) =>{
