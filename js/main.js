@@ -59,7 +59,9 @@ $(window).scroll(function() {
         $(".navbar").removeClass("bg-gradient-linear")
         $(".navbar").addClass("fixed")
         $(".navbar").addClass("bg-red-jogja")
+        $(".navbar").addClass("black-shadow")
     }else{
+        $(".navbar").removeClass("black-shadow")
         $(".navbar").addClass("absolute")
         $(".navbar").addClass("bg-gradient-linear")
         $(".navbar").removeClass("fixed")
@@ -75,6 +77,7 @@ $(".button-close").click(() => {$(".modal").hide()})
 var app = Sammy('#main', function() {
     this.get("/", function(){
         $("#main").load("home.html", () => {
+            AOS.init();
             activeMenu("#beranda")
             slider()
             $(".open-modal").click(function(){
@@ -121,6 +124,7 @@ var app = Sammy('#main', function() {
     })
     this.get('#/', function() {
         $("#main").load("home.html", () => {
+            AOS.init();
             activeMenu("#beranda")
             slider()
             $(".open-modal").click(function(){
