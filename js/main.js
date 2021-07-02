@@ -1,5 +1,7 @@
 $(".modal").hide()
-
+$("#scroll-up").click(() => {
+    $(window).scrollTop(0);
+})
 function slider(){
     var default_slide = $("#card-slider").children()[0]
     var default_progress = $("#slider-progress").children()[0]

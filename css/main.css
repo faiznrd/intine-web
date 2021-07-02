@@ -119,6 +119,9 @@
 .tab-menu{
   transition: .2s;
 }
+html {
+  scroll-behavior: smooth;
+}
 .tab-menu:hover{
   background-color: #F78978;
   font-weight: bold;
