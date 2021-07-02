@@ -154,3 +154,6 @@
 .menu-item a:hover::after{
   width: 100%;
 }
+.bg-pink{
+  background-color: #ED7D50;
+}

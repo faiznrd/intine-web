@@ -30,17 +30,22 @@
                     </div>
                 </div>
             </div>
-            <div id="language" class="z-30 relative flex items-center justify-center h-full">
-                <div class="bg-red-300 rounded-full inline-block">
+            <div id="language" class="z-50 relative flex items-center justify-center h-full">
+                <div class="bg-pink rounded-full inline-block cursor-pointer" id="bahasa-click">
                     <div class="grid grid-cols-3 gap-2 p-1">
                         <div class="h-full flex items-center">
                             <img src="assets/svg/id.svg" width="80%" alt="">
                         </div>
-                        <div class="text-center text-sm">
+                        <div class="text-center text-sm font-bold">
                             <span>ID</span>
                         </div>
                         <div class="h-full flex items-center justify-center"><img src="assets/svg/left-arrow.svg" width="50%" alt=""></div>
                     </div>
+                </div>
+                <div class="absolute dropdown rounded-2xl -bottom-40 overflow-hidden w-96 text-sm leading-wider" id="bahasa">
+                    <div class="bg-gray-200 p-3 text-black-1a font-bold border-b-1">Pilih Bahasa</div>
+                    <div class="bg-white p-3 text-gray-300 hover:bg-red-400 hover:text-white cursor-pointer">Bahasa (Indonesia)</div>
+                    <div class="bg-white p-3 text-gray-300 hover:bg-red-400 hover:text-white cursor-pointer">English (United States)</div>
                 </div>
             </div>
         </div>
