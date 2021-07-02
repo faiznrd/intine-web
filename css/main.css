@@ -123,6 +123,7 @@
 }
 .menu-bahasa{
   border-top: 1px solid rgb(194, 194, 194);
+  font-weight: 400;
 }
 .menu-bahasa:hover{
   background-color: #F78978;
