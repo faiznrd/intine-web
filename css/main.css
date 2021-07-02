@@ -113,6 +113,9 @@
 .text-yellow{
   color: #F4D92E;
 }
+.red-shadow{
+  box-shadow: 0px 0px 0 10px #e6212b17;
+}
 .tab-menu{
   transition: .2s;
 }
@@ -133,7 +136,9 @@
 .menu-bahasa:last-of-type{
   border-bottom: 0;
 }
-
+.opacity-2{
+  opacity: 0.04;
+}
 .w-auto-card{
   width: calc(100%-20rem);
 }

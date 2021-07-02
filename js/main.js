@@ -161,10 +161,10 @@ var app = Sammy('#main', function() {
                     console.log(1)
                     $(".tab-menu").removeClass("bg-pink-2")
                     $(".tab-menu").addClass("text-gray-400")
-                    $(".tab-menu").addClass("font-light")
+                    $(".tab-menu").addClass("font-normal")
                     $(".tab-menu").removeClass("text-white")
                     $(".tab-menu").removeClass("font-bold")
-                    $(this).removeClass("font-light")
+                    $(this).removeClass("font-normal")
                     $(this).addClass("font-bold")
                     $(this).addClass("bg-pink-2")
                     $(this).removeClass("text-gray-400")
@@ -192,10 +192,10 @@ var app = Sammy('#main', function() {
                     console.log(1)
                     $(".tab-menu").removeClass("bg-pink-2")
                     $(".tab-menu").addClass("text-gray-400")
-                    $(".tab-menu").addClass("font-light")
+                    $(".tab-menu").addClass("font-normal")
                     $(".tab-menu").removeClass("text-white")
                     $(".tab-menu").removeClass("font-bold")
-                    $(this).removeClass("font-light")
+                    $(this).removeClass("font-normal")
                     $(this).addClass("font-bold")
                     $(this).addClass("bg-pink-2")
                     $(this).removeClass("text-gray-400")
@@ -268,4 +268,5 @@ function dropDownFunc(){
             window.location.hash = "/explore/souvenir"
         }
     });
+    
 }
