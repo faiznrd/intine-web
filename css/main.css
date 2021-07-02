@@ -10,9 +10,6 @@
     background: url(../assets/img/tugu.png);
     background-size: cover;
 }
-.bg-gradient-linear{
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.7), rgba(255,0,0,0));
-}
 .bg-gradient-linear-to-top{
   background-image: linear-gradient(to top, rgb(0, 0, 0, 0.7), rgba(255,0,0,0));
 }
@@ -113,13 +110,29 @@
 .bg-yellow{
   background-color: #F4D92E;
 }
+.text-yellow{
+  color: #F4D92E;
+}
 .tab-menu{
   transition: .2s;
 }
 .tab-menu:hover{
-  background-color: #E6212A;
+  background-color: #F78978;
+  font-weight: bold;
   color: #fff;
 }
+.menu-bahasa{
+  border-top: 1px solid rgb(194, 194, 194);
+}
+.menu-bahasa:hover{
+  background-color: #F78978;
+  font-weight: bold;
+  color: #fff;
+}
+.menu-bahasa:last-of-type{
+  border-bottom: 0;
+}
+
 .w-auto-card{
   width: calc(100%-20rem);
 }
@@ -140,7 +153,6 @@
   z-index: 999 !important;
 }
 .menu-item a{
-  margin-bottom: 10px;
   display: inline-block;
 }
 .menu-item a::after{
@@ -156,4 +168,7 @@
 }
 .bg-pink{
   background-color: #ED7D50;
+}
+.bg-pink-2{
+  background-color: #F78978;
 }
