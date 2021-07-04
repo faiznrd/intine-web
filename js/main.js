@@ -112,9 +112,12 @@ $(".open-modal").click(function(){
     var modal_id = $(this).data("modal-id")
     $("#"+modal_id).show()
 })
+$("#loading-overlay").hide()
+
 $(".button-close").click(() => {$(".modal").hide()})
 var app = Sammy('#main', function() {
     this.get("/", function(){
+        $("#loading-overlay").show()
         $("#main").load("home.html", () => {
             AOS.init();
             slider()
@@ -124,9 +127,25 @@ var app = Sammy('#main', function() {
                 $("#"+modal_id).show()
             })
             $(".button-close").click(() => {$(".modal").hide()})
+            $("#loading-overlay").hide()
+        })
+    })
+    this.get("/index.html", function(){
+        $("#loading-overlay").show()
+        $("#main").load("home.html", () => {
+            AOS.init();
+            slider()
+            $(".open-modal").click(function(){
+                console.log(1)
+                var modal_id = $(this).data("modal-id")
+                $("#"+modal_id).show()
+            })
+            $(".button-close").click(() => {$(".modal").hide()})
+            $("#loading-overlay").hide()
         })
     })
     this.get('#/', function() {
+        $("#loading-overlay").show()
         $("#main").load("home.html", () => {
             beritaMiddleware()
             AOS.init();
@@ -137,16 +156,21 @@ var app = Sammy('#main', function() {
                 $("#"+modal_id).show()
             })
             $(".button-close").click(() => {$(".modal").hide()})
+            $("#loading-overlay").hide()
         })
     });
     this.get('#/explore/jogja', function() {
+        $("#loading-overlay").show()
         $("#main").load("explore.html", () => {
             $("#dropdown-navigator option[value=1]").attr('selected','selected');
             dropDownFunc()
-            $("#main-explore").load("sekilas.html")
+            $("#main-explore").load("sekilas.html", () =>{
+                $("#loading-overlay").hide()
+            })
         });
     });
     this.get('#/explore/wisata', function() {
+        $("#loading-overlay").show()
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             dropDownFunc()
@@ -174,10 +198,12 @@ var app = Sammy('#main', function() {
                     $(".tab").hide()
                     $("#"+tab_id).show()
                 })
+                $("#loading-overlay").hide()
             })
         });
     });
     this.get('#/explore/kuliner', function() {
+        $("#loading-overlay").show()
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             dropDownFunc()
@@ -205,10 +231,12 @@ var app = Sammy('#main', function() {
                     $(".tab").hide()
                     $("#"+tab_id).show()
                 })
+                $("#loading-overlay").hide()
             })
         });
     });
     this.get('#/explore/budaya', function() {
+        $("#loading-overlay").show()
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             dropDownFunc()
@@ -221,32 +249,44 @@ var app = Sammy('#main', function() {
                     $("#"+modal_id).show()
                 })
                 $(".button-close").click(() => {$(".modal").hide()})
+                $("#loading-overlay").hide()
             })
         });
     });
     this.get('#/explore/transportasi', function() {
+        $("#loading-overlay").show()
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             dropDownFunc()
             $("#dropdown-navigator option[value=5]").attr('selected','selected');
-            $("#main-explore").load("transportasi.html")
+            $("#main-explore").load("transportasi.html", () => {
+                $("#loading-overlay").hide()
+            })
         });
     });
     this.get('#/explore/souvenir', function() {
+        $("#loading-overlay").show()
         $("#main").load("explore.html", () => {
             $(".modal").hide()
             $("#dropdown-navigator option[value=6]").attr('selected','selected');
             dropDownFunc()
-            $("#main-explore").load("souvenir.html")
+            $("#main-explore").load("souvenir.html", () => {
+                $("#loading-overlay").hide()
+            })
         });
     });
     this.get('#/kontak', function() {
-        $("#main").load("kontak.html");
+        $("#loading-overlay").show()
+        $("#main").load("kontak.html", () => {
+            $("#loading-overlay").hide()
+        });
     });
     this.get('#/berita', function() {
+        $("#loading-overlay").show()
         $("#main").load("berita.html", () => {
             $(".modal").hide()
             dropDownFunc()
+            $("#loading-overlay").hide()
         })
     })
     }).run();
