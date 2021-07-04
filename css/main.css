@@ -2,6 +2,9 @@
 *{
     font-family: Poppins;
 }
+body{
+  color:#2D303E;
+}
 .navbar{
   transition: .5s;
   z-index: 100;
@@ -74,7 +77,7 @@
     transition: .5s;
 }
 .button-hover-red-shadow:hover{
-    box-shadow: 5px 10px 50px #E6212A;
+    box-shadow: 5px 10px 50px #e6212b8a;
 }
 .black-shadow{
     box-shadow: 5px 10px 50px rgb(0, 0, 0, 0.2);
@@ -95,11 +98,20 @@
   transition: .5s;
 }
 .button-hover-gold-shadow:hover{
-  box-shadow: 5px 10px 50px #F4D92E;
+  box-shadow: 5px 10px 50px #f4da2ea9;
 }
 .bg-gradient-linear-gold{
   background-image: linear-gradient(to right, #CBB319, #F4D92E);
 
+}
+.shadow-red-hover{
+  transition: .2s;
+}
+.shadow-red-hover:hover{
+  box-shadow: 5px 0px 20px #e6212b36;
+}
+.bg-white-jogja{
+  background-color: #F6F6F6;
 }
 .bg-darker-red{
   background-color: #B6191F;
@@ -183,4 +195,7 @@ select{
 }
 .bg-pink-2{
   background-color: #F78978;
+}
+.text-black{
+  color: #2D303E !important;
 }

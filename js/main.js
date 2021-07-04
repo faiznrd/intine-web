@@ -5,7 +5,7 @@ $("#scroll-up").click(() => {
 function slider(){
     var default_slide = $("#card-slider").children()[0]
     var default_progress = $("#slider-progress").children()[0]
-    var text_progress = $("#text-progress")
+    $("#max_slide").text("0"+$("#card-slider").children().length)
     $("#next-slide").click(() => {
         default_slide = $(default_slide).next()
         console.log(default_slide.index())
@@ -21,9 +21,9 @@ function slider(){
         if(default_progress.index() == -1){
             default_progress = $(progress_childern[0])
         }
-        $(".progress").removeClass("border-2")
-        default_progress.addClass("border-2")
-        $("#text-progress").text("0"+(default_slide.index()+1)+"/06")
+        $(".progress").removeClass("border-t-2")
+        default_progress.addClass("border-t-2")
+        $("#current_slide").text("0"+(default_slide.index()+1))
     })
     $("#prev-slide").click(() => {
         default_slide = $(default_slide).prev()
@@ -41,9 +41,9 @@ function slider(){
         if(default_progress.index() == -1){
             default_progress = $(progress_childern[progress_childern.length-1])
         }
-        $(".progress").removeClass("border-2")
-        default_progress.addClass("border-2")
-        $("#text-progress").text("0"+(default_slide.index()+1)+"/06")
+        $(".progress").removeClass("border-t-2")
+        default_progress.addClass("border-t-2")
+        $("#current_slide").text("0"+(default_slide.index()+1))
     })
 }
 slider()
