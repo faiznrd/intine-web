@@ -75,7 +75,7 @@
         </div>
     </div>
 </div>
-<div id="content" class="h-auto bg-white overflow-x-hidden">
+<div id="content" class="h-auto bg-white overflow-hidden">
     <div class="h-screen flex items-center justify-center relative text-black-1a">
         <div class="z-30 w-4/5">
             <div class="flex w-full">
@@ -109,28 +109,30 @@
         <img src="assets/img/merapi.png" class="opacity-2 z-10 absolute -bottom-14 -left-1/4" alt="">
     </div>
     <div class="h-screen flex justify-center items-center relative">
-        <div class="grid grid-cols-1 gap-4 w-4/5 h-3/4">
+        <div class="flex flex-col w-4/5 h-full relative">
             <div id="start-animation-video">
                 <h1 class="text-4xl pl-3 border-l-8 border-orange font-bold tracking-widest text-black-1a">Saksikan Video Berikut</h1>
             </div>
             <div 
-            class="z-40 flex justify-center items-center relative"
+            class="z-40 flex justify-center items-start relative h-full pt-8"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
             data-aos-anchor="#start-animation-video"
             >
-                <div class="absolute bg-red-jogja rounded-lg font-bold p-3 pl-9 pr-9 text-white text-3xl border-orange border-r-8 top-0 right-0 red-shadow">Keindahan</div>
-                <div class="absolute bg-red-jogja rounded-lg font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-20 right-48 red-shadow">Ciri Khas</div>
-                <div class="absolute bg-red-jogja rounded-lg font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-24 right-9 red-shadow">Keunikan</div>
-                <div class="absolute bg-red-jogja rounded-lg font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-24 right-9 red-shadow">Keunikan</div>
-                <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer open-modal" data-modal-id="video-home">
-                    <img src="assets/svg/icon-player.svg" alt="">
+                <div class="z-20 absolute bg-red-jogja rounded-lg font-bold p-3 pl-9 pr-9 text-white text-3xl border-orange border-r-8 top-0 right-0 red-shadow">Keindahan</div>
+                <div class="z-20 absolute bg-red-jogja rounded-lg font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-20 right-48 red-shadow">Ciri Khas</div>
+                <div class="z-20 absolute bg-red-jogja rounded-lg font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-24 right-9 red-shadow">Keunikan</div>
+                <div class="z-20 absolute bg-red-jogja rounded-lg font-bold p-2 pl-5 pr-5 text-white text-xl border-orange border-r-8 top-24 right-9 red-shadow">Keunikan</div>
+                <div class="z-10 w-4/5 h-3/4 overflow-hidden relative rounded-3xl red-shadow">
+                    <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer open-modal" data-modal-id="video-home">
+                        <img src="assets/svg/icon-player.svg" alt="">
+                    </div>
+                    <img src="assets/img/thumbnail.jpg" class="h-full w-full max-w-none"  alt="">
                 </div>
-                <img src="assets/img/tugu.png" class="rounded-3xl red-shadow" width="70%" alt="">
             </div>
         </div>
-        <img class="z-0 absolute h-full" src="assets/img/statistik.png" alt="">
+        <img class="z-0 absolute w-full" src="assets/img/statistik.png" alt="">
     </div>
     <div class="h-screen flex justify-center items-center">
         <div class="grid grid-cols-2 gap-4 w-4/5 h-3/4 relative">
