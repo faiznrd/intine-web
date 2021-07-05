@@ -107,12 +107,6 @@ const beritaMiddleware = () => {
    '</div>')
 
 }
-$(".open-modal").click(function(){
-    console.log(1)
-    var modal_id = $(this).data("modal-id")
-    $("#"+modal_id).show()
-})
-$("#loading-overlay").hide()
 
 $(".button-close").click(() => {$(".modal").hide()})
 var app = Sammy('#main', function() {
@@ -124,9 +118,14 @@ var app = Sammy('#main', function() {
             $(".open-modal").click(function(){
                 console.log(1)
                 var modal_id = $(this).data("modal-id")
+                console.log($($($("#"+modal_id).children()[1]).children()[0]).children()[1].play())
                 $("#"+modal_id).show()
+
             })
-            $(".button-close").click(() => {$(".modal").hide()})
+            $(".button-close").click(() => {
+                $(".modal").hide()
+                $("video")[0].pause()
+            })
             $("#loading-overlay").hide()
         })
     })
@@ -138,9 +137,14 @@ var app = Sammy('#main', function() {
             $(".open-modal").click(function(){
                 console.log(1)
                 var modal_id = $(this).data("modal-id")
+                console.log($($($("#"+modal_id).children()[1]).children()[0]).children()[1].play())
                 $("#"+modal_id).show()
+
             })
-            $(".button-close").click(() => {$(".modal").hide()})
+            $(".button-close").click(() => {
+                $(".modal").hide()
+                $("video")[0].pause()
+            })
             $("#loading-overlay").hide()
         })
     })
@@ -153,9 +157,14 @@ var app = Sammy('#main', function() {
             $(".open-modal").click(function(){
                 console.log(1)
                 var modal_id = $(this).data("modal-id")
+                console.log($($($("#"+modal_id).children()[1]).children()[0]).children()[1].play())
                 $("#"+modal_id).show()
+
             })
-            $(".button-close").click(() => {$(".modal").hide()})
+            $(".button-close").click(() => {
+                $(".modal").hide()
+                $("video")[0].pause()
+            })
             $("#loading-overlay").hide()
         })
     });
@@ -245,10 +254,16 @@ var app = Sammy('#main', function() {
 
                 $(".open-modal").click(function(){
                     console.log(1)
-                    var modal_id = $(this).data("id-modal")
+                    var modal_id = $(this).data("modal-id")
+                    console.log($($($("#"+modal_id).children()[1]).children()[0]).children()[1].play())
                     $("#"+modal_id).show()
+    
                 })
-                $(".button-close").click(() => {$(".modal").hide()})
+                $(".button-close").click(function(){
+                    $(".modal").hide()
+                    $(this).next()[0].pause()
+                    console.log($("video")[0])
+                })
                 $("#loading-overlay").hide()
             })
         });
