@@ -2,6 +2,50 @@ $(".modal").hide()
 $("#scroll-up").click(() => {
     $(window).scrollTop(0);
 })
+const activeLanguage = (lang) => {
+    if (lang == "en"){
+        $("#id").html("Bahasa (Indonesia)")
+        $("#en").html('<span class="w-4/5">English (United States)</span><span class="w-1/5 flex justify-end items-center"><img class="w-4" src="assets/svg/centang.svg" alt="" srcset=""></span>')
+        $("#en").addClass("flex");
+        $("#id").removeClass("flex");
+        $("#language-ticker").text("EN");
+        $("#language-flag-icon").attr("src", "assets/svg/en.svg")
+        $("[lang=\"id\"]").hide()
+        $("[lang=\"en\"]").show()
+    }else if(lang == "id"){
+        $("#en").html("English (United States)")
+        $("#id").html('<span class="w-4/5">Bahasa (Indonesia)</span><span class="w-1/5 flex justify-end items-center"><img class="w-4" src="assets/svg/centang.svg" alt="" srcset=""></span>')
+        $("#id").addClass("flex");
+        $("#en").removeClass("flex");
+        $("#language-ticker").text("ID");
+        $("#language-flag-icon").attr("src", "assets/svg/id.svg")
+        $("[lang=\"en\"]").hide()
+        $("[lang=\"id\"]").show()
+    }
+}
+const cookieMiddleware = () => {
+    if($.cookie("lang")){
+        if($.cookie("lang") == "en"){
+            activeLanguage("en");
+        }
+        if($.cookie("lang") == "id"){
+            activeLanguage("id");
+        }
+    }else{
+        activeLanguage("en");
+    }
+}
+$("#en").click(() => {
+    $.cookie("lang", "en");
+    activeLanguage("en");
+    $("#bahasa").hide()
+})
+$("#id").click(() => {
+    $.cookie("lang", "id");
+    activeLanguage("id");
+    $("#bahasa").hide()
+})
+cookieMiddleware();
 function slider(){
     var default_slide = $("#card-slider").children()[0]
     var default_progress = $("#slider-progress").children()[0]
@@ -56,7 +100,6 @@ const activeMenu = (id) => {
 $("#bahasa").hide()
 $("#bahasa-click").click(() =>{
     $("#bahasa").toggle()
-    console.log(0000000)
 })
 $(window).scroll(function() {
     var navbarHeight = $(".navbar").height()
@@ -76,43 +119,13 @@ $(window).scroll(function() {
         $(".navbar").removeClass("bg-darker-red")
     }
 })
-const beritaMiddleware = () => {
-    $("#berita-top").append(                    
-        '<div class="flex">'+
-    '<div class="w-2/5 h-full w-full rounded-3xl black-shadow overflow-hidden">'+
-        '<div class="thumbnail h-96 bg-gray-900 overflow-hidden"><img class="w-full" src="assets/img/wisata/kota/malioboro.png"></div>'+
-        '<div class="thumbnail p-9 bg-white">'+
-        '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">20 Juni 2009</div>'+
-        '<div class="text-base font-bold pb-6">Pengunjung Malioboro Diwajibkan Mematuhi Protokol Kesehatan Guna Menekan Angka Persebaran COVID-19</div>'+
-        '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
-    '</div>'+
-   '</div>'+
-   '<div class="w-3/5 flex flex-col pl-5">'+
-   '<div class="pb-5"><div class="h-72 w-full flex rounded-3xl black-shadow overflow-hidden">'+
-       '<div class="thumbnail w-2/5 bg-gray-900 overflow-hidden"><img class="h-full max-w-none" src="assets/img/andhong.png"></div>'+
-       '<div class="thumbnail h-auto w-3/5 p-9 bg-white"><div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">13 Juni 1999</div>'+
-           '<div class="text-base font-bold">Delman atau yang Lebih Dikenal dengan Nama Andhong Menjadi Daya Tarik Tersendiri Bagi Para Wisatawan yang Mengunjungi Malioboro</div>'+
-           '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
-       '</div>'+
-   '</div></div>'+
-   '<div class=""><div class="h-72 w-full rounded-3xl flex black-shadow overflow-hidden">'+
-       '<div class="thumbnail w-2/5 bg-gray-900 overflow-hidden"><img class="h-full max-w-none" src="assets/img/bakpia.png"></div>'+
-       '<div class="thumbnail h-auto w-3/5 p-9 bg-white">'+
-           '<div class="text-sm text-gray-400 font-light pb-6"><img class="inline-block pr-3" src="assets/svg/date-icon.svg" alt="" srcset="">19 Augstus 1969</div>'+
-           '<div class="text-base font-bold">Bakpia Pathok dengan Cita Rasa yang Khas Menjadi Pilihan Wisatawan Sebagai Oleh-Oleh yang Wajib Dibeli Ketika Berlibur ke Jogja</div>'+
-           '<div class="text-sm font-light text-red-500 pt-5 font-bold"><a href="#">Baca Selengkapnya</a></div>'+
-       '</div>'+
-   '</div></div>'+
-'</div>'+
-   '</div>')
-
-}
 
 $(".button-close").click(() => {$(".modal").hide()})
 var app = Sammy('#main', function() {
     this.get("/", function(){
         $("#loading-overlay").show()
         $("#main").load("home.html", () => {
+            cookieMiddleware();
             AOS.init();
             slider()
             $(".open-modal").click(function(){
@@ -132,6 +145,7 @@ var app = Sammy('#main', function() {
     this.get("/index.html", function(){
         $("#loading-overlay").show()
         $("#main").load("home.html", () => {
+            cookieMiddleware();
             AOS.init();
             slider()
             $(".open-modal").click(function(){
@@ -151,7 +165,7 @@ var app = Sammy('#main', function() {
     this.get('#/', function() {
         $("#loading-overlay").show()
         $("#main").load("home.html", () => {
-            beritaMiddleware()
+            cookieMiddleware();
             AOS.init();
             slider()
             $(".open-modal").click(function(){
@@ -170,21 +184,27 @@ var app = Sammy('#main', function() {
     });
     this.get('#/explore/jogja', function() {
         $("#loading-overlay").show()
+        cookieMiddleware();
         $("#main").load("explore.html", () => {
+            cookieMiddleware();
             $("#dropdown-navigator option[value=1]").attr('selected','selected');
             dropDownFunc()
             $("#main-explore").load("sekilas.html", () =>{
+                cookieMiddleware();
                 $("#loading-overlay").hide()
             })
         });
     });
     this.get('#/explore/wisata', function() {
         $("#loading-overlay").show()
+        cookieMiddleware();
         $("#main").load("explore.html", () => {
+            cookieMiddleware();
             $(".modal").hide()
             dropDownFunc()
             $("#dropdown-navigator option[value=3]").attr('selected','selected');
             $("#main-explore").load("wisata.html", () => {
+                cookieMiddleware();
                 $(".open-modal").click(function(){
                     console.log(1)
                     var modal_id = $(this).data("modal-id")
@@ -213,11 +233,14 @@ var app = Sammy('#main', function() {
     });
     this.get('#/explore/kuliner', function() {
         $("#loading-overlay").show()
+        cookieMiddleware();
         $("#main").load("explore.html", () => {
+            cookieMiddleware();
             $(".modal").hide()
             dropDownFunc()
             $("#dropdown-navigator option[value=2]").attr('selected','selected');
             $("#main-explore").load("kuliner.html", () => {
+                cookieMiddleware();
                 $(".open-modal").click(function(){
                     console.log(1)
                     var modal_id = $(this).data("modal-id")
@@ -246,11 +269,14 @@ var app = Sammy('#main', function() {
     });
     this.get('#/explore/budaya', function() {
         $("#loading-overlay").show()
+        cookieMiddleware();
         $("#main").load("explore.html", () => {
+            cookieMiddleware();
             $(".modal").hide()
             dropDownFunc()
             $("#dropdown-navigator option[value=4]").attr('selected','selected');
             $("#main-explore").load("budaya.html", () =>{
+                cookieMiddleware();
 
                 $(".open-modal").click(function(){
                     console.log(1)
@@ -270,22 +296,28 @@ var app = Sammy('#main', function() {
     });
     this.get('#/explore/transportasi', function() {
         $("#loading-overlay").show()
+        cookieMiddleware();
         $("#main").load("explore.html", () => {
+            cookieMiddleware();
             $(".modal").hide()
             dropDownFunc()
             $("#dropdown-navigator option[value=5]").attr('selected','selected');
             $("#main-explore").load("transportasi.html", () => {
+                cookieMiddleware();
                 $("#loading-overlay").hide()
             })
         });
     });
     this.get('#/explore/souvenir', function() {
         $("#loading-overlay").show()
+        cookieMiddleware();
         $("#main").load("explore.html", () => {
+            cookieMiddleware();
             $(".modal").hide()
             $("#dropdown-navigator option[value=6]").attr('selected','selected');
             dropDownFunc()
             $("#main-explore").load("souvenir.html", () => {
+                cookieMiddleware();
                 $("#loading-overlay").hide()
             })
         });
@@ -293,12 +325,14 @@ var app = Sammy('#main', function() {
     this.get('#/kontak', function() {
         $("#loading-overlay").show()
         $("#main").load("kontak.html", () => {
+            cookieMiddleware();
             $("#loading-overlay").hide()
         });
     });
     this.get('#/berita', function() {
         $("#loading-overlay").show()
         $("#main").load("berita.html", () => {
+            cookieMiddleware();
             $(".modal").hide()
             dropDownFunc()
             $("#loading-overlay").hide()
