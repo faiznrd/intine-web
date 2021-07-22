@@ -2,6 +2,7 @@ $(".modal").hide()
 $("#scroll-up").click(() => {
     $(window).scrollTop(0);
 })
+var language;
 const activeLanguage = (lang) => {
     if (lang == "en"){
         $("#id").html("Bahasa (Indonesia)")
@@ -30,9 +31,11 @@ const cookieMiddleware = () => {
         }
         if($.cookie("lang") == "id"){
             activeLanguage("id");
+
         }
     }else{
         activeLanguage("en");
+
     }
 }
 $("#en").click(() => {
@@ -315,6 +318,7 @@ var app = Sammy('#main', function() {
             cookieMiddleware();
             $(".modal").hide()
             $("#dropdown-navigator option[value=6]").attr('selected','selected');
+            
             dropDownFunc()
             $("#main-explore").load("souvenir.html", () => {
                 cookieMiddleware();
@@ -340,6 +344,15 @@ var app = Sammy('#main', function() {
     })
     }).run();
 function dropDownFunc(){
+    var valueDrop = $("#dropdown-navigator").find('option:selected').val();
+    $("#en").click(() => {
+        $("#dropdown-navigator option[value="+valueDrop+"][lang=en]").attr('selected','selected');
+        
+    })
+    $("#id").click(() => {
+        $("#dropdown-navigator option[value="+valueDrop+"][lang=id]").attr('selected','selected');
+    })
+    console.log()
     $("#dropdown-navigator").on('change', function() {
         console.log(this.value)
         if(this.value == 1){
