@@ -2,9 +2,10 @@ $(".modal").hide()
 $("#scroll-up").click(() => {
     $(window).scrollTop(0);
 })
-var language;
+var languageID;
 const activeLanguage = (lang) => {
     if (lang == "en"){
+        languageID = "en"
         $("#id").html("Bahasa (Indonesia)")
         $("#en").html('<span class="w-4/5">English (United States)</span><span class="w-1/5 flex justify-end items-center"><img class="w-4" src="assets/svg/centang.svg" alt="" srcset=""></span>')
         $("#en").addClass("flex");
@@ -14,6 +15,7 @@ const activeLanguage = (lang) => {
         $("[lang=\"id\"]").hide()
         $("[lang=\"en\"]").show()
     }else if(lang == "id"){
+        languageID = "id"
         $("#en").html("English (United States)")
         $("#id").html('<span class="w-4/5">Bahasa (Indonesia)</span><span class="w-1/5 flex justify-end items-center"><img class="w-4" src="assets/svg/centang.svg" alt="" srcset=""></span>')
         $("#id").addClass("flex");
@@ -190,9 +192,9 @@ var app = Sammy('#main', function() {
         cookieMiddleware();
         $("#main").load("explore.html", () => {
             cookieMiddleware();
-            $("#dropdown-navigator option[value=1]").attr('selected','selected');
-            dropDownFunc()
+            $("#dropdown-navigator option[lang="+languageID+"][value=1]").attr('selected','selected');
             $("#main-explore").load("sekilas.html", () =>{
+                dropDownFunc()
                 cookieMiddleware();
                 $("#loading-overlay").hide()
             })
@@ -204,9 +206,9 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             cookieMiddleware();
             $(".modal").hide()
-            dropDownFunc()
-            $("#dropdown-navigator option[value=3]").attr('selected','selected');
+            $("#dropdown-navigator option[lang="+languageID+"][value=3]").attr('selected','selected');
             $("#main-explore").load("wisata.html", () => {
+                dropDownFunc()
                 cookieMiddleware();
                 $(".open-modal").click(function(){
                     console.log(1)
@@ -240,8 +242,8 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             cookieMiddleware();
             $(".modal").hide()
+            $("#dropdown-navigator option[lang="+languageID+"][value=2]").attr('selected','selected');
             dropDownFunc()
-            $("#dropdown-navigator option[value=2]").attr('selected','selected');
             $("#main-explore").load("kuliner.html", () => {
                 cookieMiddleware();
                 $(".open-modal").click(function(){
@@ -276,8 +278,8 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             cookieMiddleware();
             $(".modal").hide()
+            $("#dropdown-navigator option[lang="+languageID+"][value=4]").attr('selected','selected');
             dropDownFunc()
-            $("#dropdown-navigator option[value=4]").attr('selected','selected');
             $("#main-explore").load("budaya.html", () =>{
                 cookieMiddleware();
 
@@ -303,8 +305,8 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             cookieMiddleware();
             $(".modal").hide()
+            $("#dropdown-navigator option[lang="+languageID+"][value=5]").attr('selected','selected');
             dropDownFunc()
-            $("#dropdown-navigator option[value=5]").attr('selected','selected');
             $("#main-explore").load("transportasi.html", () => {
                 cookieMiddleware();
                 $("#loading-overlay").hide()
@@ -317,10 +319,10 @@ var app = Sammy('#main', function() {
         $("#main").load("explore.html", () => {
             cookieMiddleware();
             $(".modal").hide()
-            $("#dropdown-navigator option[value=6]").attr('selected','selected');
+            $("#dropdown-navigator option[lang="+languageID+"][value=6]").attr('selected','selected');
             
-            dropDownFunc()
             $("#main-explore").load("souvenir.html", () => {
+                dropDownFunc()
                 cookieMiddleware();
                 $("#loading-overlay").hide()
             })
@@ -344,13 +346,16 @@ var app = Sammy('#main', function() {
     })
     }).run();
 function dropDownFunc(){
-    var valueDrop = $("#dropdown-navigator").find('option:selected').val();
+    var valueDrop = $("#dropdown-navigator").find(':selected').val();
+    console.log(valueDrop);
     $("#en").click(() => {
-        $("#dropdown-navigator option[value="+valueDrop+"][lang=en]").attr('selected','selected');
+        $("#dropdown-navigator").find(':selected').attr('selected',null)
+        $("#dropdown-navigator option[lang="+languageID+"][value="+valueDrop+"][lang=en]").attr('selected','selected');
         
     })
     $("#id").click(() => {
-        $("#dropdown-navigator option[value="+valueDrop+"][lang=id]").attr('selected','selected');
+        $("#dropdown-navigator").find(':selected').attr('selected',null)
+        $("#dropdown-navigator option[lang="+languageID+"][value="+valueDrop+"][lang=id]").attr('selected','selected');
     })
     console.log()
     $("#dropdown-navigator").on('change', function() {
